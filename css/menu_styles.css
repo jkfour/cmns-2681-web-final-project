@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    
+}
+
+main {
+    display: block;
+}
+
+main img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    z-index: 100;
+
+}
+
+p {
+    text-align: center;
+}
+
+#menu-header {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 3px;
+    border-radius: 15px;
+    background-color: #d3d3d3;
+}
+
+#expandedImageContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+#general-menu {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 15px 15px 30px 15px;
+    border-radius: 15px;
+    border: 5px outset rgb(214, 139, 0);
+    background-color: #d3d3d3;
+}
+#general-menu h2 {
+    margin-top: 20px;
+}
+#shadow-box {
+    padding: 5px 0;
+    background-color: #a3a3a3;
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px;
+    max-height: 600px;
+    border: 10px outset rgb(214, 139, 0);
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*hide the images by default*/
+.Slides {
+    display: none;
+    background-color: #d3d3d3;
+    width: 600px;
+    height: 600px;
+}
+
+/*Next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Position the "next" button to the right*/
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*on hover, addablack background color with a little bit see-through*/
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
