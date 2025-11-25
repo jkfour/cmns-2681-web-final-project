@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-block{
+    width: 100%;
+    margin: 0 auto 50px auto;
+}
+
+.contact-block{
+    width: fit-content;
+    align-self: end;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    padding: 30px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.contact-block a{
+    color: whitesmoke;
+}

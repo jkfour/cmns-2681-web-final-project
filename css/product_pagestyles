@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.product-gallery {
+    width: min(1000px, 50%);
+    margin: 50px auto;
+    columns: 3 100px;
+    column-gap: 2em;
+}
+
+.product-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 2px solid whitesmoke;
+    margin-bottom: 2em;
+}
+
+.product-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-gallery p {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.12);
+    padding: 10px 0;
+}
+
