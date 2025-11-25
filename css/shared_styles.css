@@ -29,7 +29,6 @@ body {
     width: 200px;
     height: auto;
     perspective: 400px;
-    box-shadow: 0 0 5px 10px rgba(154, 160, 185, .05), 0 0 15px 15px rgba(166, 173, 201, .2);
 }
 
 .logo {
@@ -38,6 +37,7 @@ body {
     object-fit: contain;
     border-radius: 0 15px 15px 0;
     background-color: black;
+    box-shadow: 0 0 5px 10px rgba(154, 160, 185, .05), 0 0 15px 15px rgba(166, 173, 201, .2);
     transform: rotateY(35deg);
     z-index: 1;
 
@@ -54,14 +54,18 @@ nav ul {
     height: auto;
     display: flex;
     flex-direction: row nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: start;
 }
 
-nav ul li {}
+nav ul li {
+    margin-right: min(30px, 1%);
+    
+}
 
 nav a {
     color: whitesmoke;
+    white-space: nowrap;
     font-size: 1rem;
     padding: 3px 12px 0px 12px;
     background-color: rgb(82, 82, 82);
