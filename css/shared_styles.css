@@ -26,7 +26,6 @@ p {
 .page-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
     background: repeating-conic-gradient(#0f161a 0 25%, #0000 0 50%) 50% / 150px 150px;
     border-bottom: 10px solid rgb(82, 82, 82);
 }
@@ -98,7 +97,6 @@ nav a:hover {
 
 
 footer {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     color: whitesmoke;
