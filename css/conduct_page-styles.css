@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+
+img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    float: left;
+}

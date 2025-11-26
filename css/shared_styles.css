@@ -5,9 +5,20 @@
     outline: 1px dashed red;
 }
 */
+html {
+    color: whitesmoke;
+}
+h2 {
+    font-size: 2rem;
+}
+
 
 body {
     background-color: rgb(37, 37, 37);
+}
+
+p {
+    color: whitesmoke;
 }
 
 
@@ -84,10 +95,7 @@ nav a:hover {
 
 
 
-main {
-    display: flex;
-    flex-direction: row wrap;
-}
+
 
 footer {
     margin-top: 30px;
@@ -127,17 +135,9 @@ footer div:first-of-type a {
 }
 
 
-.title {
-    width: 100%;
-    height: auto;
-    margin-top: auto;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    background-color: rgba(51, 51, 51, 0.9);
-    padding: 10px 15px;
-}
 
-.title h1 {
+
+.title {
     width: 100%;
     height: auto;
     text-align: center;
@@ -159,7 +159,14 @@ footer div:first-of-type a {
     background-clip: text;
 }
 
-
+/*Drop cap*/
+    .drop-cap::first-letter {
+        font-size: 4em; /* Adjust size as needed */
+        float: left; /* Allow text to wrap around it */
+        line-height: 1; /* Prevent extra space above the letter */
+        margin-right: 0.1em; /* Add space between the drop cap and the rest of the text */
+        /* Add other styling properties like font-family, color, etc. */
+    }
 /*gradient border*/
 .gradient-border {
     border: 15px solid transparent;
