@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+/*
+* {
+    outline: 1px dashed red;
+}
+*/
+
+:root {
+    /*Color Variables*/
+    --primary-color-rgba: rgba(245, 245, 245, 1);
+    --primary-color-hsla: hsla(0, 0%, 96%, 1);
+    --secondary-color-rgba: rgba(82, 82, 82, 1);
+    --secondary-color-hsla: hsla(0, 0%, 32%, 1);
+
+    --background-color-rgba: rgba(30, 30, 30, 1);
+    --background-color-hsla: hsla(0, 0%, 12%, 1);
+    --secondary-background-color-rgba: rgba(37, 37, 37, 1);
+    --secondary-background-color-hsla: hsla(0, 0%, 15%, 1);
+
+    --boxshadow-primary-rgba: rgba(154, 160, 185, .05);
+    --boxshadow-primary-hsla: hsla(228, 18%, 66%, .05);
+
+    --boxshadow-secondary-rgba: rgba(166, 173, 201, .2);
+    --boxshadow-secondary-hsla: hsla(228, 24%, 72%, .2);
+
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--background-color-rgba);
+    background-color: var(--background-color-hsla);
+    background-image: url("../media/images/rook.png");
+    background-size: 100px;
+    background-position-x: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+main {
+    padding: 30px 0;
+    margin: 0 120px;
+}
+section {
+    margin-bottom: 80px;
+}
+
+
+/*Content*/
+.content-container {
+    background-color: var(--background-color-rgba);
+    background-color: var(--background-color-hsla);
+    border: 3px solid var(--primary-color-hsla);
+    border: 3px solid var(--primary-color-rgba);
+}
+p {
+    color: var(--primary-color-rgba);
+    color: var(--primary-color-hsla);
+}
+
+/*links*/
+a,
+a:visited {
+    color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+    background-color: var(--secondary-background-color-hsla);
+    background-color: var(--secondary-background-color-rgba);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color-hsla);
+    color: var(--secondary-color-rgba);
+}
+
+
+/*headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page Header */
+.page-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+    border-bottom: 20px solid var(--secondary-background-color-hsla);
+    border-bottom: 20px solid var(--secondary-background-color-rgba);
+}
+
+/*Top Row Contains Logo and Business Name*/
+.page-header-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header h1 {
+    width: 100%;
+    text-align: center;
+}
+
+/*Contain the logo in a sized link*/
+#logo-link {
+    width: 150px;
+    height: auto;
+    background-color: transparent;
+    perspective: 400px;
+}
+
+/*Rotated Logo*/
+.logo {
+    width: 150%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0 15px 15px 0;
+    transform: translate(-10%, 0%) rotateY(35deg);
+    z-index: 1;
+
+}
+
+/*Navigation Bar*/
+.header-nav {
+    z-index: 2;
+}
+
+nav ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: min(30px, 10%);
+
+}
+
+nav a {
+    white-space: nowrap;
+    padding: 3px 12px 0px 12px;
+    border-radius: 9px;
+}
+
+nav a:hover {
+    color: var(--secondary-color-hsla);
+    color: var(--secondary-color-rgba);
+
+    box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
+    border-radius: 9px;
+    border: 5px solid var(--secondary-background-color-rgba);
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--background-color-rgba);
+    background-color: var(--background-color-hsla);
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#socials a {
+    padding: 15px;
+}
+
+#quick-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}

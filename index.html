@@ -9,9 +9,8 @@
     <meta charset="utf-8" />
     <title>Sanctuary Games</title>
     <link href="css/reset.css" rel="stylesheet">
-    <link href="css/shared_styles.css" rel="stylesheet">
-    <link href="css/index_page-styles.css" rel="stylesheet">
-    <link href="css/typographical_styles.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <link href="css/slideshow.css" rel="stylesheet">
     <script src="javascript/slideshow.js" async></script>
 </head>
@@ -19,7 +18,7 @@
 <body>
     <header class="page-header">
         <div class="page-header-top-row">
-            <a href="index.html" id=header_logo>
+            <a href="index.html" id=logo-link>
                 <img class="logo" src="media/images/logo.jpg" alt="Sanctuary Games" />
             </a>
             <h1 class="title">Sanctuary Games: Slogan</h1>
@@ -37,7 +36,7 @@
         </nav>
     </header>
     <main>
-        <div class="event-block">
+        <section>
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <div class="slides-container gradient-border">
@@ -109,7 +108,7 @@
             </div>
             <br>
             <!-- Slideshow Navigation -->
-            <div class="slideshow-nav">
+            <div class="slideshow-nav content-container">
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -119,9 +118,9 @@
                 <span class="dot" onclick="currentSlide(6)"></span>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </div>
-        <div class="info-block">
-            <div class="about-us">
+        </section>
+        <section id="info-block">
+            <div class="about-us content-container">
                 <p class="drop-cap">
                     Come to Sanctuary Games for all of your entertainment needs! We are a gaming and hobby shop located
                     in
@@ -130,7 +129,7 @@
                     your own games. Enjoy a delicious milkshake or boba tea and grab a snack at our refreshment counter.
                     Sanctuary Games is the place to be! </p>
             </div>
-            <div class="contact-block">
+            <div class="contact-block content-container">
                 <h3>OPENING HOURS:</h3>
                 <p>MON- SAT : 10 am - 9 pm
                     <br>
@@ -140,21 +139,20 @@
                 <a href="mailto:info@sanctuarygames.ca">info@sanctuarygames.ca</a>
                 <a href="">250-833-5223</a>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 <footer>
-    <div>
+    <div id="socials">
         <a href="">facebook</a>
         <a href="">X</a>
         <a href="">linkedIn</a>
     </div>
-    <div>
+    <div id="quick-info">
         <p>&copy; 2025</p>
         <a href="code_of_conduct.html">Store Policies</a>
         <a href="application.html">Join Our Team!</a>
         <p>Last Updated November 22, 2025</p>
     </div>
 </footer>
-
 </html>

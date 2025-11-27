@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+
+#info-block {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.about-us {
+    min-width: 300px;
+    max-width: 700px;
+    padding: 30px;
+}
+
+/*Drop cap*/
+.drop-cap::first-letter {
+    font-size: 4em;
+    float: left;
+    line-height: 1;
+    margin-right: 0.1em;
+}
+
+/*Container for Contact Content*/
+.contact-block {
+    width: fit-content;
+    align-self: flex-end;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Contact Block Content*/
+.contact-block h3:first-of-type {
+    margin-bottom: 10px;
+}
+
+.contact-block h3:last-of-type {
+    margin: 20px 0 10px 0;
+}
+
+.contact-block a {
+    margin-bottom: 6px;
+}
+
+
+/*gradient border around event slideshow container*/
+.gradient-border {
+    border: 15px solid transparent;
+    border-radius: 20px;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(-45deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,
+            rgba(141, 108, 0, 0.9) 70%, rgba(70, 70, 70, 0.3) 75%) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    animation: border_shift 3s linear infinite;
+    background-size: 500% 100%;
+}
+
+/*animate the gradient border*/
+@keyframes border_shift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
