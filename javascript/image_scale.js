@@ -10,7 +10,7 @@ let overlay = document.getElementById("overlay");
 
 
 //applied directly to images, scales the image and toggles the dimmed overlay
-function scaleImage(img) {
+function scaleImage(img, orientation) {
     //clone the image and add to the expanded container
     let sourceImage = img.cloneNode(false);
     expandedContainer.appendChild(sourceImage);
@@ -21,11 +21,17 @@ function scaleImage(img) {
     if (!scaled) {
         expandedContainer.style.display = "block";
         sourceImage.style.position = "fixed";
-        sourceImage.style.width = "auto";
-        sourceImage.style.height = "90vh";
         sourceImage.style.top = "50%";
         sourceImage.style.left = "50%";
         sourceImage.style.transform = "translate(-50%, -50%) scale(0.9)";
+
+        if (orientation === 'v') {
+            sourceImage.style.width = "auto";
+            sourceImage.style.height = "100vh";
+        } else {
+            sourceImage.style.width = "90vw";
+            sourceImage.style.height = "auto";
+        }
         scaled = true;
     } else {
         removeAllChildNodes(expandedContainer);

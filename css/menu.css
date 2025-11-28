@@ -11,20 +11,41 @@ main img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas:
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.grid-item {
+    padding: 1em;
+    background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+    text-align: center;
+}
+
+@media screen and (min-width: 641px) {
+    .grid-container {
+            grid-template-areas:
         "box-1 box-2 box-2 box-3"
         "box-1 box-4 box-4 box-3"
         "box-1 box-4 box-4 box-3"
         "box-1 box-4 box-4 box-3";
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    }
 }
 
-.grid-item {
-    padding: 2em;
-    background-color: var(--background-color-hsla);
-    background-color: var(--background-color-rgba);
-    text-align: center;
+
+
+@media screen and (max-width: 640px) {
+    .grid-container {
+        grid-template-areas:
+            "box-2"
+            "box-1"
+            "box-3"
+            "box-4";
+    }
+    main {
+ 
+    }
 }

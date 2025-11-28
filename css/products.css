@@ -13,14 +13,14 @@
 }
 
 .grid-item {
-    width: 300px;
+    width: 200px;
     height: 100%;
     padding: 1em;
     background-color: var(--background-color-hsla);
     background-color: var(--background-color-rgba);
 }
 .grid-item:first-of-type {
-    width: 600px;
+    width: 400px;
     height: 100%;
     padding: 1em;
     background-color: var(--background-color-hsla);
@@ -28,6 +28,7 @@
 }
 
 .grid-item img {
+    display: block;
     object-fit: contain;
 }
 
@@ -74,4 +75,15 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+/*Mobile Screen Sizes*/
+@media screen and (max-width: 640px) {
+
+}
+
+
+
+@media screen and (min-width: 641px) {
+
 }

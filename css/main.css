@@ -15,12 +15,9 @@
 
     --background-color-rgba: rgba(30, 30, 30, 1);
     --background-color-hsla: hsla(0, 0%, 12%, 1);
-    --secondary-background-color-rgba: rgba(37, 37, 37, 1);
-    --secondary-background-color-hsla: hsla(0, 0%, 15%, 1);
 
     --boxshadow-primary-rgba: rgba(154, 160, 185, .05);
     --boxshadow-primary-hsla: hsla(228, 18%, 66%, .05);
-
     --boxshadow-secondary-rgba: rgba(166, 173, 201, .2);
     --boxshadow-secondary-hsla: hsla(228, 24%, 72%, .2);
 
@@ -36,19 +33,182 @@ body {
     background-image: url("../media/images/rook.png");
     background-size: 100px;
     background-position-x: center;
+    background-position-y: 250px;
     background-repeat: repeat;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 main {
-    padding: 30px 0;
-    margin: 0 120px;
+    background-color: var(--background-color-hsla);
 }
-section {
-    margin-bottom: 80px;
+
+/**********************
+Mobile screen sizes
+***********************/
+@media screen and (max-width: 640px) {
+    main {
+        z-index: 1;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+
+    /**************************
+    Mobile Header and footer
+    *******************/
+    #logo-link {
+        width: 50px;
+        height: auto;
+        background-color: transparent;
+        perspective: 400px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .navicon {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        background-color: var(--background-color-hsla);
+        background-color: var(--background-color-rgba);
+        border-radius: 0 0 12px 0;
+        position: absolute;
+        width: fit-content;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 15px;
+        z-index: 100;
+    }
+
+    nav ul li {
+        margin-right: 5px;
+
+    }
+
+    nav a {
+        white-space: nowrap;
+        padding: 3px 12px 0px 12px;
+        border-radius: 9px;
+    }
+
+    footer a, p {
+        font-size: 0.8em;
+        
+    }
+    #socials a {
+        padding: 5px;
+    }
+
 }
+
+/********************
+Tablet and Desktop screen sizes
+*********************************/
+@media screen and (min-width: 641px) {
+    main {
+        padding: 30px 0;
+        margin: 0 120px;
+    }
+
+    section {
+        margin-bottom: 80px;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    /*Tablet and Desktop Header and Footer*/
+    /*Contain the logo in a sized link*/
+    .navicon {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #logo-link {
+        width: 150px;
+        height: auto;
+        background-color: transparent;
+        perspective: 400px;
+    }
+
+    nav ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        white-space: nowrap;
+        padding: 3px 12px 0px 12px;
+        border-radius: 9px;
+    }
+
+    #socials a {
+        padding: 15px;
+    }
+
+
+}
+
+
 
 
 /*Content*/
@@ -58,6 +218,7 @@ section {
     border: 3px solid var(--primary-color-hsla);
     border: 3px solid var(--primary-color-rgba);
 }
+
 p {
     color: var(--primary-color-rgba);
     color: var(--primary-color-hsla);
@@ -68,9 +229,8 @@ a,
 a:visited {
     color: var(--primary-color-hsla);
     color: var(--primary-color-rgba);
-    background-color: var(--secondary-background-color-hsla);
-    background-color: var(--secondary-background-color-rgba);
-    font-size: 1.2rem;
+    background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
     text-decoration: none;
 }
 
@@ -97,49 +257,17 @@ h2 {
     text-transform: uppercase;
 }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-}
-
-h3 {
-    font-size: 1.6rem;
-}
-
-h4 {
-    font-size: 1.4rem;
-}
-
-h5 {
-    font-size: 1.2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Page Header */
 .page-header {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     background-color: var(--background-color-hsla);
     background-color: var(--background-color-rgba);
-    border-bottom: 20px solid var(--secondary-background-color-hsla);
-    border-bottom: 20px solid var(--secondary-background-color-rgba);
+    border-bottom: 20px solid var(--background-color-hsla);
+    border-bottom: 20px solid var(--background-color-rgba);
 }
 
 /*Top Row Contains Logo and Business Name*/
@@ -153,14 +281,6 @@ h5 {
 .page-header h1 {
     width: 100%;
     text-align: center;
-}
-
-/*Contain the logo in a sized link*/
-#logo-link {
-    width: 150px;
-    height: auto;
-    background-color: transparent;
-    perspective: 400px;
 }
 
 /*Rotated Logo*/
@@ -177,26 +297,6 @@ h5 {
 /*Navigation Bar*/
 .header-nav {
     z-index: 2;
-}
-
-nav ul {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-nav ul li {
-    margin-right: min(30px, 10%);
-
-}
-
-nav a {
-    white-space: nowrap;
-    padding: 3px 12px 0px 12px;
-    border-radius: 9px;
 }
 
 nav a:hover {
@@ -220,10 +320,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: end;
-}
-
-#socials a {
-    padding: 15px;
 }
 
 #quick-info {
