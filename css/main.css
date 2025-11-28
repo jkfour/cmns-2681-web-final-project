@@ -36,9 +36,10 @@ body {
     background-image: url("../media/images/rook.png");
     background-size: 100px;
     background-position-x: center;
+    background-repeat: repeat;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -88,6 +89,7 @@ h5,
 h6 {
     color: var(--primary-color-hsla);
     color: var(--primary-color-rgba);
+    text-align: center;
 }
 
 h1,

@@ -1,12 +1,12 @@
 @charset "utf-8";
-/*Container and Overlay for expanded images*/
+/*Container and Overlay for expanded images
+
+fixed position allow for coverage of the entire page that maintains through scrolling
+*/
 
 #expandedImageContainer {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
     display: none;
     z-index: 3;
 }
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
