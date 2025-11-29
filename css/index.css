@@ -1,17 +1,11 @@
 @charset "utf-8";
 
-
 #info-block {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
 }
-
 
 /*Drop cap*/
 .drop-cap::first-letter {
@@ -22,11 +16,14 @@
 }
 
 /*Mobile Screen Sizes*/
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
     #info-block {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
     .about-us {
         padding: 10px;
@@ -35,25 +32,34 @@
 }
 
 
-
-@media screen and (min-width: 641px) {
-    #info-block {
+/*Tablet and Desktop sizes*/
+@media screen and (min-width: 801px) {
+    main {
+        display: flex;
         flex-direction: row;
-        justify-content: center;
+        flex-wrap: wrap;
+    }
+    section {
+        width: 100%;
+        height: auto;
+        flex: 1;
+    }
+    #info-block {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
     }
     .contact-block {
-        align-self: flex-end;
+        margin-right: 0;
     }
-    .about-us {
-        padding: 30px;
-        max-width: 700px;
-    }
+
 }
 
 /*Container for Contact Content*/
 .contact-block {
     width: fit-content;
-    padding: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -74,8 +80,8 @@
 
 /*gradient border around event slideshow container*/
 .gradient-border {
-    border: 15px solid transparent;
-    border-radius: 20px;
+    border: 10px solid transparent;
+    border-radius: 12px;
     background:
         linear-gradient(white, white) padding-box,
         linear-gradient(-45deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,

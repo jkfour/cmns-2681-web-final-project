@@ -5,16 +5,19 @@
     outline: 1px dashed red;
 }
 */
-
+* {
+    box-sizing: border-box;
+}
 :root {
     /*Color Variables*/
     --primary-color-rgba: rgba(245, 245, 245, 1);
     --primary-color-hsla: hsla(0, 0%, 96%, 1);
-    --secondary-color-rgba: rgba(82, 82, 82, 1);
-    --secondary-color-hsla: hsla(0, 0%, 32%, 1);
+    --secondary-color-rgba: rgb(40, 40, 40);
+    --secondary-color-hsla: hsla(0, 0%, 16%, 1);
 
     --background-color-rgba: rgba(30, 30, 30, 1);
     --background-color-hsla: hsla(0, 0%, 12%, 1);
+
 
     --boxshadow-primary-rgba: rgba(154, 160, 185, .05);
     --boxshadow-primary-hsla: hsla(228, 18%, 66%, .05);
@@ -28,21 +31,146 @@ html {
 }
 
 body {
-    background-color: var(--background-color-rgba);
-    background-color: var(--background-color-hsla);
-    background-image: url("../media/images/rook.png");
-    background-size: 100px;
-    background-position-x: center;
-    background-position-y: 250px;
-    background-repeat: repeat;
+    background-color: var(--secondary-color-rgba);
+    background-color: var(--secondary-color-hsla);
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 main {
+    width: 100%;
+    height: auto;
+}
+
+/* Page Header */
+.page-header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+    border-bottom: 20px solid var(--background-color-hsla);
+    border-bottom: 20px solid var(--background-color-rgba);
+}
+
+/*Top Row Contains Logo and Business Name*/
+.page-header-top-row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header h1 {
+    width: 100%;
+    text-align: center;
+}
+
+/*Rotated Logo*/
+.logo {
+    width: 150%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0 15px 15px 0;
+    transform: translate(-10%, 0%) rotateY(35deg);
+    z-index: 1;
+
+}
+
+/*Navigation Bar*/
+.header-nav {
+    background-color: var(--boxshadow-primary-hsla);
+    background-color: var(--boxshadow-primary-rgba);
+    padding: 15px 0 10px 0;
+    z-index: 2;
+}
+
+nav a:hover {
+    color: var(--secondary-color-hsla);
+    color: var(--secondary-color-rgba);
+
+    box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
+    border-radius: 9px;
+    border: 5px solid var(--secondary-background-color-rgba);
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--background-color-rgba);
+    background-color: var(--background-color-hsla);
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#quick-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
+
+/*Content*/
+.content-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--background-color-rgba);
+    background-color: var(--background-color-hsla);
+    border: 3px solid var(--primary-color-hsla);
+    border: 3px solid var(--primary-color-rgba);
+}
+
+p {
+    color: var(--primary-color-rgba);
+    color: var(--primary-color-hsla);
+}
+
+/*links*/
+a,
+a:visited {
+    color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+    background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color-hsla);
+    color: var(--secondary-color-rgba);
+}
+
+
+/*headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+    text-align: center;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
 }
 
 /**********************
@@ -54,7 +182,7 @@ Mobile screen sizes
     }
 
     section {
-        margin-bottom: 20px;
+        margin: 1rem;
     }
 
     h1 {
@@ -124,10 +252,12 @@ Mobile screen sizes
         border-radius: 9px;
     }
 
-    footer a, p {
+    footer a,
+    p {
         font-size: 0.8em;
-        
+
     }
+
     #socials a {
         padding: 5px;
     }
@@ -138,13 +268,8 @@ Mobile screen sizes
 Tablet and Desktop screen sizes
 *********************************/
 @media screen and (min-width: 641px) {
-    main {
-        padding: 30px 0;
-        margin: 0 120px;
-    }
-
     section {
-        margin-bottom: 80px;
+        margin: 1vw;
     }
 
 
@@ -176,6 +301,7 @@ Tablet and Desktop screen sizes
 
     nav {
         display: block;
+        margin-left: 150px;
     }
 
     #logo-link {
@@ -190,9 +316,9 @@ Tablet and Desktop screen sizes
         height: auto;
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     nav a {
@@ -206,125 +332,4 @@ Tablet and Desktop screen sizes
     }
 
 
-}
-
-
-
-
-/*Content*/
-.content-container {
-    background-color: var(--background-color-rgba);
-    background-color: var(--background-color-hsla);
-    border: 3px solid var(--primary-color-hsla);
-    border: 3px solid var(--primary-color-rgba);
-}
-
-p {
-    color: var(--primary-color-rgba);
-    color: var(--primary-color-hsla);
-}
-
-/*links*/
-a,
-a:visited {
-    color: var(--primary-color-hsla);
-    color: var(--primary-color-rgba);
-    background-color: var(--background-color-hsla);
-    background-color: var(--background-color-rgba);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--secondary-color-hsla);
-    color: var(--secondary-color-rgba);
-}
-
-
-/*headings*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--primary-color-hsla);
-    color: var(--primary-color-rgba);
-    text-align: center;
-}
-
-h1,
-h2 {
-    text-transform: uppercase;
-}
-
-/* Page Header */
-.page-header {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-color-hsla);
-    background-color: var(--background-color-rgba);
-    border-bottom: 20px solid var(--background-color-hsla);
-    border-bottom: 20px solid var(--background-color-rgba);
-}
-
-/*Top Row Contains Logo and Business Name*/
-.page-header-top-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.page-header h1 {
-    width: 100%;
-    text-align: center;
-}
-
-/*Rotated Logo*/
-.logo {
-    width: 150%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 0 15px 15px 0;
-    transform: translate(-10%, 0%) rotateY(35deg);
-    z-index: 1;
-
-}
-
-/*Navigation Bar*/
-.header-nav {
-    z-index: 2;
-}
-
-nav a:hover {
-    color: var(--secondary-color-hsla);
-    color: var(--secondary-color-rgba);
-
-    box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
-    border-radius: 9px;
-    border: 5px solid var(--secondary-background-color-rgba);
-}
-
-/*Footer*/
-footer {
-    width: 100%;
-    height: auto;
-    background-color: var(--background-color-rgba);
-    background-color: var(--background-color-hsla);
-}
-
-#socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-#quick-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
 }

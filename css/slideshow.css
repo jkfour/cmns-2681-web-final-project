@@ -1,7 +1,8 @@
 /* Slideshow container */
 .slideshow-container {
-    width: 96%;
-    margin: auto;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
 }
 
 .slides-container {
@@ -29,7 +30,8 @@
 
 .event-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
 }
 
 .event-info {
@@ -135,7 +137,7 @@
 
 /*Mobile Screen Sizes*/
 @media screen and (max-width: 640px) {
-    .slides-container {
+    .slideshow-container {
         width: 95vw;
         height: auto;
     }
@@ -144,8 +146,8 @@
 
 /*Tablet and Desktop screen sizes*/
 @media screen and (min-width: 641px) {
-    .slides-container {
-        width: 600px;
+    .slideshow-container {
+        width: 100%;
         height: auto;
         margin: 0 auto;
     }
