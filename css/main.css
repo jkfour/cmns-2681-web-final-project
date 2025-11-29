@@ -61,32 +61,12 @@ main {
     border-bottom: 20px solid var(--background-color-rgba);
 }
 
-/*Top Row Contains Logo and Business Name*/
-.page-header-top-row {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
 .page-header h1 {
     width: 100%;
     text-align: center;
 }
 
-/*Rotated Logo*/
-.logo {
-    width: 150%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 0 15px 15px 0;
-    transform: translate(-10%, 0%) rotateY(35deg);
-    z-index: 1;
 
-}
 
 /*Navigation Bar*/
 .header-nav {
@@ -104,6 +84,7 @@ nav a:hover {
     border-radius: 9px;
     border: 5px solid var(--secondary-background-color-rgba);
 }
+
 
 /*Footer*/
 footer {
@@ -214,8 +195,31 @@ Mobile screen sizes
     /**************************
     Mobile Header and footer
     *******************/
+
+    /*Top Row Contains Logo and Business Name*/
+    .page-header-top-row {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /*Rotated Logo*/
+    .logo {
+        width: 150%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 15px 0 0 15px;
+        transform: translate(-10%, 0%) rotateY(-25deg);
+        z-index: 1;
+
+    }
+
     #logo-link {
-        width: 50px;
+        width: 80px;
         height: auto;
         background-color: transparent;
         perspective: 400px;
@@ -226,9 +230,13 @@ Mobile screen sizes
     }
 
     .navicon {
-        display: block;
-        width: 100%;
+        width: 200%;
         height: auto;
+    }
+    .navContainer {
+        display: block;
+        width: fit-content;
+        height: fit-content;
     }
 
     nav ul {
@@ -299,7 +307,29 @@ Tablet and Desktop screen sizes
     }
 
     /*Tablet and Desktop Header and Footer*/
-    /*Contain the logo in a sized link*/
+
+    /*Top Row Contains Logo and Business Name*/
+    .page-header-top-row {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /*Rotated Logo*/
+    .logo {
+        width: 150%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0 15px 15px 0;
+        transform: translate(-10%, 0%) rotateY(35deg);
+        z-index: 1;
+
+    }
+
     .navicon {
         display: none;
     }

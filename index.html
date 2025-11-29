@@ -7,12 +7,14 @@
     -->
 
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanctuary Games</title>
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/slideshow.css" rel="stylesheet">
     <script src="javascript/slideshow.js" async></script>
+    <script src="javascript/navigation.js" async></script>
 </head>
 
 <body>
@@ -21,12 +23,12 @@
             <a href="index.html" id=logo-link>
                 <img class="logo" src="media/images/logo.jpg" alt="Sanctuary Games" />
             </a>
-            <div class="navicon">
-                <img src="media/images/navicon.png">
-            </div>
             <h1 class="title">Sanctuary Games</h1>
+            <div class="navContainer" onclick="toggleNav()">
+                <img class="navicon" src="media/images/navicon.png">
+            </div>
         </div>
-        <nav class="header-nav">
+        <nav class="header-nav" id="topNav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="play_space.html">Our Space</a></li>
