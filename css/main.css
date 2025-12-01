@@ -5,7 +5,9 @@
     outline: 1px dashed red;
 }
 */
-
+* {
+    box-sizing: border-box;
+}
 :root {
     /*Color Variables*/
     --primary-color-rgba: rgba(245, 245, 245, 1);
