@@ -170,7 +170,6 @@ Mobile screen sizes
     }
 
     section {
-        margin: 1rem;
     }
 
     h1 {
@@ -284,7 +283,6 @@ Tablet and Desktop screen sizes
 *********************************/
 @media screen and (min-width: 641px) {
     section {
-        margin: 1vw;
     }
 
 

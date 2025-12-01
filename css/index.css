@@ -19,6 +19,9 @@ section {
     width: 100%;
     height: auto;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*Mobile Screen Sizes*/
@@ -27,7 +30,7 @@ section {
         display: flex;
         flex-direction: column;
     }
-
+    
     #info-block {
         flex-direction: column;
         justify-content: center;
