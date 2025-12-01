@@ -15,16 +15,24 @@
     margin-right: 0.1em;
 }
 
+section {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
 /*Mobile Screen Sizes*/
 @media screen and (max-width: 800px) {
     main {
         display: flex;
         flex-direction: column;
     }
+
     #info-block {
         flex-direction: column;
         justify-content: center;
     }
+
     .about-us {
         padding: 10px;
         max-width: 250px;
@@ -39,11 +47,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    section {
-        width: 100%;
-        height: auto;
-        flex: 1;
-    }
+
     #info-block {
         width: 100%;
         height: auto;
@@ -51,6 +55,7 @@
         justify-content: space-between;
         align-items: flex-end;
     }
+
     .contact-block {
         margin-right: 0;
     }
