@@ -1,1 +1,18 @@
 @charset "utf-8";
+
+
+/*Mobile Screen Sizes*/
+@media screen and (max-width: 640px) {
+   video {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+   }
+}
+
+
+/*Tablet and Desktop Screensizes*/
+@media screen and (min-width: 641px) {
+
+  
+}

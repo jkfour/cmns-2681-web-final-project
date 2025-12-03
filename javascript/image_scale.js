@@ -29,8 +29,17 @@ function scaleImage(img, orientation) {
             sourceImage.style.width = "auto";
             sourceImage.style.height = "100vh";
         } else {
-            sourceImage.style.width = "90vw";
-            sourceImage.style.height = "auto";
+            if (window.matchMedia("(orientation: portrait)").matches) {
+                sourceImage.style.bottom = "0";
+                sourceImage.style.left = "0";
+                sourceImage.style.transform = "rotate(90deg) scale(0.7)";
+                sourceImage.style.width = "auto";
+                sourceImage.style.height = "100vh";
+            }
+            else {
+                sourceImage.style.width = "100vw";
+                sourceImage.style.height = "auto";
+            }
         }
         scaled = true;
     } else {

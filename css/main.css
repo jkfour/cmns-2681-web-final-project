@@ -167,6 +167,7 @@ Mobile screen sizes
 @media screen and (max-width: 640px) {
     main {
         z-index: 1;
+        padding: 5px;
     }
 
     h1 {
@@ -279,7 +280,9 @@ Mobile screen sizes
 Tablet and Desktop screen sizes
 *********************************/
 @media screen and (min-width: 641px) {
-
+    main {
+        padding: 20px 50px;
+    }
     h1 {
         font-size: 2rem;
     }

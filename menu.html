@@ -33,7 +33,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="play_space.html">Our Space</a></li>
-                <li><a href="menu.html">Food & Drinks</a></li>
+                <li><a class="current-page" href="menu.html">Food & Drinks</a></li>
                 <li><a href="products.html">Our Products</a></li>
                 <li><a href="code_of_conduct.html">Code of Conduct</a></li>
                 <li><a href="application.html">Join Our Team!</a></li>
@@ -44,24 +44,25 @@
     <main>
         <section>
             <div class="grid-container">
-                <div class="content-container grid-item" style="grid-area: box-2">
+                <div class="content-container grid-item" style="grid-area: open">
                     <h2>Our Menus</h2>
                     <br>
                     <p>We have a wonderful selection of refreshing milkshakes, bubble teas and fried goods
                         to keep you filled while you enjoy your games.
                     </p>
                 </div>
-                <img class="grid-item gradient-border" style="grid-area: box-1" onclick="scaleImage(this, 'v')"
+                <img class="grid-item gradient-border" style="grid-area: drinks" onclick="scaleImage(this, 'v')"
                     src="media/images/menu/SANCTUARY GAMES (6).png" alt="Drinks Menu">
-                <img class="grid-item gradient-border" style="grid-area: box-3" onclick="scaleImage(this, 'v')"
+                <img class="grid-item gradient-border" style="grid-area: pearls" onclick="scaleImage(this, 'v')"
                     src="media/images/menu/SANCTUARY GAMES (7).png" alt="Pearl Options">
-                <img class="grid-item gradient-border" style="grid-area: box-4" onclick="scaleImage(this, 'h')"
+                <img class="grid-item gradient-border" style="grid-area: general" onclick="scaleImage(this, 'h')"
                     src="media/images/menu/Copy of Copy of TaroTapioca_edited.jpg" alt="General Menu">
+                <div class="content-container grid-item" style="grid-area: close">
+                    <h3>Enjoy a tasty beverage and a hot snack!</h3>
+                </div>
             </div>
         </section>
-        <section>
-            <h3 class="content-container">Enjoy a tasty beverage and a hot snack!</h3>
-        </section>
+
         <div id="expandedImageContainer"></div>
         <div id="overlay" onclick="reset()"></div>
     </main>

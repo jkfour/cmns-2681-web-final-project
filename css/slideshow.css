@@ -79,6 +79,7 @@
 .slideshow-nav {
     width: fit-content;
     text-align: center;
+    white-space: nowrap;
     padding: 15px;
     margin: 0 auto;
 }
@@ -89,9 +90,9 @@
     cursor: pointer;
     width: auto;
     margin: 0 30px;
-    color: rgba(245, 245, 245, 1);
+    color: var(--primary-color-hsla);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
     transition: 0.6s ease;
     user-select: none;
 }
@@ -99,8 +100,8 @@
 /* On hover, add a boxshadow*/
 .prev:hover,
 .next:hover {
-    background-color: rgba(166, 173, 201, .2);
-    box-shadow: 0 0 5px 10px rgba(154, 160, 185, .05), 0 0 15px 30px rgba(166, 173, 201, .2);
+    background-color: var(--boxshadow-secondary-hsla);
+    box-shadow: 0 0 3px 6px rgba(154, 160, 185, .05), 0 0 5px 15px rgba(166, 173, 201, .2);
 }
 
 /* The dots/bullets/indicators */
@@ -109,14 +110,14 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: var(--primary-color-hsla);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .dot:hover {
-    background-color: rgba(107, 107, 107, 0.8);
+    background-color: var(--background-color-hsla);
 }
 
 /* Slideshow Card Transition Animation */
