@@ -4,16 +4,20 @@
 fixed position allow for coverage of the entire page that maintains through scrolling
 */
 
+main {
+    position: relative;
+}
 #expandedImageContainer {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     display: none;
     z-index: 3;
 }
 
 #overlay {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;

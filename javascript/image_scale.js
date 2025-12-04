@@ -5,51 +5,69 @@
 
 //variables
 let scaled = false;
-let expandedContainer = document.getElementById("expandedImageContainer");
-let overlay = document.getElementById("overlay");
+const expandedContainer = document.getElementById("expandedImageContainer");
+const overlay = document.getElementById("overlay");
 
 
 //applied directly to images, scales the image and toggles the dimmed overlay
 function scaleImage(img, orientation) {
-    //clone the image and add to the expanded container
-    let sourceImage = img.cloneNode(false);
-    expandedContainer.appendChild(sourceImage);
 
-    //if the image has not already been clicked on, makethe expanded container
-    //visible and style the image to be centered and cover 90% of the viewport height.
-    //otherwise remove any cloned images, hide the container and reset the component.
-    if (!scaled) {
-        expandedContainer.style.display = "block";
-        sourceImage.style.position = "fixed";
-        sourceImage.style.top = "50%";
-        sourceImage.style.left = "50%";
-        sourceImage.style.transform = "translate(-50%, -50%) scale(0.9)";
+    if (orientation === 'portrait') {
 
-        if (orientation === 'v') {
-            sourceImage.style.width = "auto";
-            sourceImage.style.height = "100vh";
-        } else {
-            if (window.matchMedia("(orientation: portrait)").matches) {
-                sourceImage.style.bottom = "0";
-                sourceImage.style.left = "0";
-                sourceImage.style.transform = "rotate(90deg) scale(0.7)";
-                sourceImage.style.width = "auto";
-                sourceImage.style.height = "100vh";
-            }
-            else {
-                sourceImage.style.width = "100vw";
-                sourceImage.style.height = "auto";
-            }
+        if (!scaled) {
+            //clone the image and add as a child to the expanded container
+            const sourceImage = img.cloneNode(false);
+            expandedContainer.appendChild(sourceImage);
+            //make the expanded container visible
+            expandedContainer.style.display = "block";
+            expandedContainer.style.top = "0";
+            expandedContainer.style.left = "0";
+            sourceImage.style.position = "fixed";
+            sourceImage.style.background = "transparent";
+
+            sourceImage.style.width = "calc(100vw - 1em)";
+            sourceImage.style.height = "calc(100vh - 1em)";
+            sourceImage.style.top = "0.5em";
+            sourceImage.style.left = "0.5em";
+
+            scaled = true;
         }
-        scaled = true;
+        else {
+            //if the image is already scaled, remove cloned images and hide the container
+            removeAllChildNodes(expandedContainer);
+            expandedContainer.style.display = "none";
+            scaled = false;
+        }
+
     } else {
-        removeAllChildNodes(expandedContainer);
-        expandedContainer.style.display = "none";
-        scaled = false;
+        //get values for the window width
+        const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        //if the window width is greater than 600px
+        if (vw >= 600) {
+            //clone the image and add as a child to the expanded container
+            const sourceImage = img.cloneNode(false);
+            expandedContainer.appendChild(sourceImage);
+            //make the expanded container visible
+            expandedContainer.style.display = "block";
+            expandedContainer.style.top = "0";
+            expandedContainer.style.left = "0";
+            sourceImage.style.position = "fixed";
+            sourceImage.style.background = "transparent";
+
+
+            sourceImage.style.width = "calc(100vw - 1em)";
+            sourceImage.style.height = "calc(100vh - 1em)";
+            sourceImage.style.top = "0";
+            sourceImage.style.left = "0";
+            scaled = true;
+        }
     }
-    //toggle the dimmed overlay
     backgroundBlur();
 }
+
+//function to
+
+
 //function to toggle the dimmed overlay
 function backgroundBlur() {
     if (scaled) {
@@ -58,14 +76,15 @@ function backgroundBlur() {
         overlay.style.display = "none";
     }
 }
-//function to remove child nodes from a specific node
+
+//function to remove child nodes from a specified node
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
 
-//appplied to the overlay, resets both the enlarged container and dimmed overlay when clicked
+//appplied to the overlay and expanded container, resets both the enlarged container and dimmed overlay when clicked
 function reset() {
     removeAllChildNodes(expandedContainer);
     expandedContainer.style.display = "none";
