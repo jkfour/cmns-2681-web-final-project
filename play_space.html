@@ -41,29 +41,33 @@
         </nav>
     </header>
     <main>
-        <section class="content-container">
-            <h2 style="grid-area: heading">Check out our play spaces!</h2>
-            <p style="grid-area: description;">We have all the space you need to enjoy a good table top session with your friends.
-                Upstairs we have 3 tables next to large windows providing lots of natural light. Head downstairs and you will 
+        <section class="content-container" id="description">
+            <h2>Check out our play spaces!</h2>
+            <p>We have all the space you need to enjoy a good table top session with your friends.
+                Upstairs we have 3 tables next to large windows providing lots of natural light. Head downstairs and you
+                will
                 find an even larger area, perfect for hosting draft nights and birthday parties.
             </p>
         </section>
         <section>
-            <img style="grid-area: img1" src="media/images/anthony-le-gdtu3zwVCb4-unsplash.jpg" />
-            <figure id="videoContainer">
-                <video id="video" controls preload="metadata" poster="media/images/logo.jpg" style="grid-area: video">
-                    <source src="media/videos/cardgame.mp4" type="video/mp4" />
-                    <source src="media/videos/cardgame.webm" type="video/webm" />
-                    Your browser does not support playback for this video. Please upgrade or try another browser.
-                </video>
-                <figcaption>
-                    <img src="media/images/cc.xlarge.png"
-                        alt="" /> People Playing Cards |
-                    <a href="https://www.pexels.com/video/a-group-of-people-playing-cards-6518168/">pexels.com</a>
-                </figcaption>
-            </figure>
-            <img style="grid-area: img2" src="media/images/thomas-buchholz-0n7_eiAQZwA-unsplash.jpg" />
-            <p style="grid-area: closing">If you're lacking in tabletop games, don't worry, we've got you covered! We have many games and puzzles available for your enjoyment.</p>
+            <div class="playspace-grid">
+                <img class="grid-item" style="grid-area: img1" src="media/images/anthony-le-gdtu3zwVCb4-unsplash.jpg" />
+                <figure class="grid-item" id="videoContainer" style="grid-area: video">
+                    <video id="video" class="content-container" controls preload="metadata" poster="media/images/logo.jpg">
+                        <source src="media/videos/cardgame.mp4" type="video/mp4" />
+                        <source src="media/videos/cardgame.webm" type="video/webm" />
+                        Your browser does not support playback for this video. Please upgrade or try another browser.
+                    </video>
+                    <figcaption>
+                        <img src="media/images/cc.xlarge.png" alt="" /> People Playing Cards |
+                        <a href="https://www.pexels.com/video/a-group-of-people-playing-cards-6518168/">pexels.com</a>
+                    </figcaption>
+                </figure>
+                <img class="grid-item" style="grid-area: img2"
+                    src="media/images/thomas-buchholz-0n7_eiAQZwA-unsplash.jpg" />
+                <p class="grid-item content-container" style="grid-area: closing; align-self: center;">If you're lacking in tabletop games, don't worry, we've
+                    got you covered! We have many games and puzzles available for your enjoyment.</p>
+            </div>
         </section>
     </main>
     <footer>

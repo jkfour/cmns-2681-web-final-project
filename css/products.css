@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+
+#description {
+    margin-bottom: 30px;
+}
+#outro {
+    margin-top: 15px;
+}
 .gallery-grid {
     display: grid;
     width: 100%;
