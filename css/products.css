@@ -82,6 +82,9 @@
 
 /*Mobile Screen Sizes*/
 @media screen and (max-width: 640px) {
+    main {
+        padding: 10px;
+    }
     .gallery-grid {
         gap: 0.3em;
         grid-template-columns: 1fr 1fr;
@@ -98,7 +101,9 @@
 
 /*Tablet and Desktop Screensizes*/
 @media screen and (min-width: 641px) {
-
+    main {
+        padding: 30px 150px;
+    }
     .gallery-grid {
         gap: 1em;
         grid-template-columns: 1fr 1fr 1fr 1fr;

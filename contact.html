@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    Author: James Fournier
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanctuary Games</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <script src="javascript/navigation.js" async></script>
+
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header-top-row">
+            <a href="index.html" id=logo-link>
+                <img class="logo" src="media/images/logo.jpg" alt="Sanctuary Games" />
+            </a>
+            <h1 class="title">Sanctuary Games</h1>
+            <div class="navContainer" onclick="toggleNav()">
+                <img class="navicon" src="media/images/navicon.png">
+            </div>
+        </div>
+        <nav class="header-nav" id="topNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="play_space.html">Our Space</a></li>
+                <li><a href="menu.html">Food & Drinks</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
+                <li><a class="current-page" href="contact.html">Join Our Team!</a></li>
+                <li><a href="">reference</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="grid-item content-container" style="grid-area: message;">
+            <form id="survey" action="http://www.example.com/redball/survey" method="post">
+                <fieldset id="custInfo">
+                    <legend>Leave Us a Message!</legend>
+                    <div class="formRow">
+                        <label for="name">Name*</label>
+                        <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
+                    </div>
+                    <div class="formRow">
+                        <label for="city">City</label>
+                        <input name="custCity" id="city" type="text" value="Salmon Arm" />
+                    </div>
+                    <div class="formRow">
+                        <label for="prov">Province</label>
+                        <input name="custProv" id="prov" type="text" value="BC" />
+                    </div>
+                    <div class="formRow">
+                        <label for="phone">Phone Number</label>
+                        <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+                            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}S" />
+                    </div>
+                    <div class="formRow">
+                        <label for="mail">E-mail*</label>
+                        <input name="custEmail" id="mail" type="email" required />
+                    </div>
+                    <div class="formRow">
+                        <label for="info">Is your message about one of the following?</label>
+                        <select name="infoSrc" id="info" size="3" multiple>
+                            <option value="internet">Current Stock</option>
+                            <option value="mag">Pre-Releases</option>
+                            <option value="news">Events</option>
+                        </select>
+                    </div>
+                    <div class="formRow" style="flex-direction: column;">
+                        <label for="message">Your message:</label>
+                        <textarea name="custMessage" id="message" type="text" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+                    </div>
+                    <div class="formRow">
+                        <label for="gameSpin">How often do you play tabletop games? (# per month) </label>
+                        <input name="gameTimes" id="gameSpin" type="number" value="1" step="1" min="0" max="30" />
+                    </div>
+                    <div class="formRow">
+                        <label for="favGame">Do you have a favourite game?</label>
+                        <input name="gameFav" id="favGame" type="text" />
+
+                    </div>
+                    <div id="mailCheck">
+                        <label for="mailCB">I would like to join the mailing list for updates on products and
+                            events!</label>
+                        <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+                    </div>
+                </fieldset>
+                <div id="buttons">
+                    <input type="submit" value="Send" />
+                    <input type="reset" value="Reset" />
+                </div>
+            </form>
+        </section>
+        <section class="grid-item" id ="contact-image-container" style="grid-area: img;">
+            <img src="media/images/yellow and white duck plush toy on green grass during daytime_edited.jpg">
+        </section>
+        <section class="grid-item content-container" style="grid-area: application;">
+            <form id="apply" action="http://www.example.com/redball/survey" method="post">
+                <fieldset id="custInfo">
+                    <legend>Join our Team!</legend>
+                    <div class="formRow">
+                        <label for="name">Name*</label>
+                        <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
+                    </div>
+                    <div class="formRow">
+                        <label for="city">City</label>
+                        <input name="custCity" id="city" type="text" value="Salmon Arm" required />
+                    </div>
+                    <div class="formRow">
+                        <label for="prov">Province</label>
+                        <input name="custProv" id="prov" type="text" value="BC" required />
+                    </div>
+                    <div class="formRow">
+                        <label for="phone">Phone Number</label>
+                        <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+                            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}S" required />
+                    </div>
+                    <div class="formRow">
+                        <label for="mail">E-mail*</label>
+                        <input name="custEmail" id="mail" type="email" required />
+                    </div>
+                    <div class="formRow" style="flex-direction: column;">
+                        <label for="experience">Experience</label>
+                        <textarea name="custExperience" id="experience" type="text" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+                    </div>
+                </fieldset>
+                <div id="buttons">
+                    <input type="submit" value="Submit Application" />
+                    <input type="reset" value="Reset" />
+                </div>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <div id="socials">
+            <a href="">facebook</a>
+            <a href="">X</a>
+            <a href="">linkedIn</a>
+        </div>
+        <div id="quick-info">
+            <p>&copy; 2025</p>
+            <a href="code_of_conduct.html">Store Policies</a>
+            <a href="application.html">Join Our Team!</a>
+            <p>Last Updated November 22, 2025</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

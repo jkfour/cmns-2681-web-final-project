@@ -90,33 +90,3 @@ section {
 .contact-block a {
     margin-bottom: 6px;
 }
-
-
-/*gradient border around event slideshow container*/
-.gradient-border {
-    border: 10px solid transparent;
-    border-radius: 12px;
-    background:
-        linear-gradient(white, white) padding-box,
-        linear-gradient(-45deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,
-            rgba(141, 108, 0, 0.9) 70%, rgba(70, 70, 70, 0.3) 75%) border-box;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    animation: border_shift 3s linear infinite;
-    background-size: 500% 100%;
-}
-
-/*animate the gradient border*/
-@keyframes border_shift {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 50% 0%;
-    }
-
-    100% {
-        background-position: 100% 0%;
-    }
-}

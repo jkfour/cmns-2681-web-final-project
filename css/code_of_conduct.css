@@ -7,3 +7,20 @@ img {
     display: block;
     float: left;
 }
+
+
+
+/*Mobile Screen Sizes*/
+@media screen and (max-width: 640px) {
+    main {
+        padding: 10px;
+    }
+}
+
+
+/*Tablet and Desktop Screensizes*/
+@media screen and (min-width: 641px) {
+    main {
+        padding: 30px 150px;
+    }
+}

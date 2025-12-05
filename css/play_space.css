@@ -45,6 +45,9 @@ main {
 
 /*Tablet and Desktop Screensizes*/
 @media screen and (min-width: 641px) {
+    main {
+        padding: 30px 150px;
+    }
     .playspace-grid {
         grid-template-columns: 0.5fr 0.5fr;
         grid-template-rows: 0.4fr 0.3fr 0.3fr;
