@@ -40,10 +40,11 @@
         </nav>
     </header>
     <main>
-        <section class="grid-item content-container" style="grid-area: message;">
+        <div class="grid-item" style="grid-area: message;">
             <form id="survey" action="http://www.example.com/redball/survey" method="post">
                 <fieldset id="custInfo">
                     <legend>Leave Us a Message!</legend>
+                    <br>
                     <div class="formRow">
                         <label for="name">Name*</label>
                         <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
@@ -66,8 +67,8 @@
                         <input name="custEmail" id="mail" type="email" required />
                     </div>
                     <div class="formRow">
-                        <label for="info">Is your message about one of the following?</label>
-                        <select name="infoSrc" id="info" size="3" multiple>
+                        <label for="messageInfo">Is your message about one of the following?</label>
+                        <select name="msgInfo" id="messageInfo" size="3" multiple>
                             <option value="internet">Current Stock</option>
                             <option value="mag">Pre-Releases</option>
                             <option value="news">Events</option>
@@ -75,7 +76,7 @@
                     </div>
                     <div class="formRow" style="flex-direction: column;">
                         <label for="message">Your message:</label>
-                        <textarea name="custMessage" id="message" type="text" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+                        <textarea name="custMessage" id="message" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
                     </div>
                     <div class="formRow">
                         <label for="gameSpin">How often do you play tabletop games? (# per month) </label>
@@ -86,25 +87,26 @@
                         <input name="gameFav" id="favGame" type="text" />
 
                     </div>
-                    <div id="mailCheck">
+                    <div class="formRow" id="mailCheck">
                         <label for="mailCB">I would like to join the mailing list for updates on products and
                             events!</label>
                         <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
                     </div>
                 </fieldset>
-                <div id="buttons">
+                <div class="formRow" id="buttons">
                     <input type="submit" value="Send" />
                     <input type="reset" value="Reset" />
                 </div>
             </form>
-        </section>
-        <section class="grid-item" id ="contact-image-container" style="grid-area: img;">
+        </div>
+        <div class="grid-item" id ="contact-image-container" style="grid-area: img;">
             <img src="media/images/yellow and white duck plush toy on green grass during daytime_edited.jpg">
-        </section>
-        <section class="grid-item content-container" style="grid-area: application;">
+        </div>
+        <div class="grid-item" style="grid-area: application;">
             <form id="apply" action="http://www.example.com/redball/survey" method="post">
-                <fieldset id="custInfo">
+                <fieldset id="applyInfo">
                     <legend>Join our Team!</legend>
+                    <br>
                     <div class="formRow">
                         <label for="name">Name*</label>
                         <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
@@ -128,15 +130,20 @@
                     </div>
                     <div class="formRow" style="flex-direction: column;">
                         <label for="experience">Experience</label>
-                        <textarea name="custExperience" id="experience" type="text" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+                        <textarea name="custExperience" id="experience"rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
                     </div>
                 </fieldset>
-                <div id="buttons">
-                    <input type="submit" value="Submit Application" />
+                <div class="formRow" id="buttons">
+                    <input type="submit" value="Submit" />
                     <input type="reset" value="Reset" />
                 </div>
             </form>
-        </section>
+        </div>
+        <div id="callback" class="grid-item content-container" style="grid-area: callback">
+            <h3>
+                We look forward to hearing from you!
+            </h3>
+        </div>
 
     </main>
     <footer>

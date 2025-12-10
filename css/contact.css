@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+/*Page layout styles*/
 main {
    display: grid;
 }
@@ -7,99 +9,110 @@ main {
 .grid-item {
    padding: 1em;
    width: 100%;
-   height: 100%;
+   height: auto;
    overflow: hidden;
 }
+
 #contact-image-container {
    width: 100%;
    height: 100%;
 }
+
 .grid-item img {
    display: block;
    width: 100%;
-   height: 100%;
+   max-height: 300px;
    object-fit: cover;
    clip-path: inset(1px round 10px);
 }
 
+#callback {
+   width: fit-content;
+}
+
+/*Form grid layouts*/
+
 form {
-   display: grid;
-   width: 100%;
    height: 100%;
+   color: var(--primary-color-rgba);
+   color: var(--primary-color-hsla);
+   display: grid;
+   gap: 20px;
+   grid-auto-flow: row;
+   grid-template-rows: 1fr auto;
+
 }
 
 fieldset {
    display: grid;
-   width: 100%;
-   height: 100%;
+   grid-auto-flow: row;
+   grid-template-rows: auto;
    gap: 20px;
+
 }
 
 .formRow {
-   display: flex;
-   flex-direction: row nowrap;
-   flex: 1;
-   gap: 10px;
-   justify-content: space-between;
+   display: grid;
+   grid-auto-flow: column;
+   grid-template-columns: 0.8fr 1fr;
+   gap: 20px;
 }
 
-#info {
-   -webkit-flex: 0 0 100px;
-   flex: 0 0 100px;
-   margin-left: 5px;
-}
-
-#mailCheck {
-   display: flex;
-   flex-direction: row nowrap;
-   gap: 30px;
-}
-
-#mailCB {
-   transform: scale(2);
-   align-self: flex-end;
-}
-
-
-#experience, #message {
-   height: 100px;
+.formRow#buttons {
+   grid-template-columns: 1fr 1fr;
+   justify-items: center;
 }
 
 
 
-/* Text Area Styles */
-textarea {
-   min-height: 100px;
-   width: 100%;
-   resize: none;
-}
+
+/* Form Element Styles */
+
 /* Legend Styles */
 legend {
    background-color: var(--accent-color-hsla);
    color: white;
    padding: 5px;
-   margin-bottom: 30px;
 }
 
-/* Form Button Styles */
-div#buttons {
-   display: flex;
-   flex-direction: row nowrap;
-   gap: 20px;
-}
-div#buttons input {
-   flex: 1;
+/* Text Area Styles */
+textarea {
+   box-sizing: border-box;
+   min-height: 100px;
+   max-width: 100%;
+   resize: none;
 }
 
 input[type='submit'],
 input[type='reset'] {
+   width: fit-content;
    font-size: 1.2em;
    padding: 5px;
 }
 
+#messageInfo {
+   justify-self: end;
+   width: 100px;
+}
+
+#gameSpin {
+   justify-self: end;
+   width: fit-content;
+   text-align: center;
+   height: 30px;
+}
+
+#mailCheck {
+   grid-template-columns: 2fr 0.5fr;
+}
+
+#mailCB {
+   justify-self: end;
+   transform: scale(1.5);
+}
+
 
 /* Validation Styles */
-
 
 input#name:focus:valid,
 input#phone:focus:valid,
@@ -116,21 +129,17 @@ input#mail:focus:invalid {
 }
 
 
-
-
-
-
-
 /*Mobile Screen Sizes*/
 @media screen and (max-width: 860px) {
    main {
       padding: 10px;
       grid-template-columns: 1fr;
-      grid-template-rows: 0.1fr 1fr 0.7fr;
+      grid-template-rows: auto;
       grid-template-areas:
          "img"
          "message"
-         "application";
+         "application"
+         "callback";
       gap: 20px;
    }
 }
@@ -139,20 +148,13 @@ input#mail:focus:invalid {
 /*Tablet and Desktop Screensizes*/
 @media screen and (min-width: 861px) {
    main {
-      padding: 30px 5rem;
+      padding: 30px 10%;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 0.2fr 0.5fr;
+      grid-template-rows: auto;
       grid-template-areas:
          "message img"
-         "message application";
+         "message application"
+         "callback callback";
       gap: 30px;
-   }
-   .grid-item:first-of-type {
-      min-height: fit-content;
-      height: 100%;
-   }
-   .grid-item:last-of-type {
-      min-height: fit-content;
-      height: 100%;
    }
 }
