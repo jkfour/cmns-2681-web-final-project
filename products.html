@@ -13,83 +13,95 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/products.css" rel="stylesheet">
     <script src="javascript/navigation.js" async></script>
+    <script src="javascript/next_release_countdown.js" async></script>
 
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="page-header-top-row">
-            <a href="index.html" id=logo-link>
-                <img class="logo" src="media/images/logo.jpg" alt="Sanctuary Games" />
-            </a>
-            <h1 class="title">Sanctuary Games</h1>
-            <div class="navContainer" onclick="toggleNav()">
-                <img class="navicon" src="media/images/navicon.png">
-            </div>
+    <header id="header-grid">
+        <a class="header-grid-item" id=logo-link style="grid-area: logo" href="index.html">
+            <img class="rotatedImg" src="media/images/logo.jpg" alt="Sanctuary Games" />
+        </a>
+
+        <div class="header-grid-item" id="title" style="grid-area: title">
+            <h1>Sanctuary Games</h1>
         </div>
-        <nav class="header-nav" id="topNav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="play_space.html">Our Space</a></li>
-                <li><a href="menu.html">Food & Drinks</a></li>
-                <li><a class="current-page" href="products.html">Our Products</a></li>
-                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
-                <li><a href="contact.html">Join Our Team!</a></li>
-                <li><a href="">reference</a></li>
+
+        <div class="header-grid-item" id="navIconContainer" style="grid-area: navicon" onclick="toggleNav()">
+            <img id="navicon" src="media/images/navicon.png">
+        </div>
+
+        <nav class="header-grid-item" style="grid-area: nav">
+            <ul id="navBar">
+                <li class="navItem"><a href="index.html">Home</a></li>
+                <li class="navItem"><a href="play_space.html">Our Space</a></li>
+                <li class="navItem"><a href="menu.html">Food & Drinks</a></li>
+                <li class="navItem"><a href="products.html">Our Products</a></li>
+                <li class="navItem"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                <li class="navItem"><a class="current-page" href="contact.html">Join Our Team!</a></li>
+                <li class="navItem"><a href="">reference</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2 class="content-container" id="description">We sell a variety of goods to satisfy your hobby needs.</h2>
-        </section>
-        <section>
-            <div class="gallery-grid">
-                <div class="next-release content-container grid-item" style="grid-area: box-1">
-                    <div>
-                        <h5>Upcoming Release:</h5>
-                        <h4>Pokemon Starshine Moondance</h4>
-                    </div>
-                    <img src="media/images/events/pokemon.avif">
-                    <p>TIME:DAY:MONTH:YEAR</p>
+        <h2 class="content-container" id="description">We sell a variety of goods to satisfy your hobby needs.</h2>
+
+        <div class="gallery-grid">
+            <div class="next-release content-container grid-item" style="grid-area: box-1">
+                <div id="release-header">
+                    <h5>Upcoming Release:</h5>
+                    <h4>Pokemon Starshine Moondance</h4>
                 </div>
-                <div class="content-container grid-item card" style="grid-area: box-2">
-                    <img src="media/images/products/boardgames.jpeg" alt="Boardgames">
-                    <h5>Boardgames</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-3">
-                    <img src="media/images/products/artsupplies.jpg" alt="Art Supplies">
-                    <h5>Art Supplies</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-4">
-                    <img src="media/images/products/dioramakits.jpg" alt="Diorama Kits">
-                    <h5>Diorama Kits</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-5">
-                    <img src="media/images/products/dNdPara.jpg" alt="Dungeons & Dragons Paraphanelia">
-                    <h5>Dungeons & Dragons Paraphanelia</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-6">
-                    <img src="media/images/products/manga&figurines.jpeg" alt="Mange & Figurines">
-                    <h5>Manga & Figurines</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-7">
-                    <img src="media/images/products/mtg.jpg" alt="Magic the Gathering">
-                    <h5>Magic the Gathering</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-8">
-                    <img src="media/images/products/plushies.jpg" alt="Plushies and Toys">
-                    <h5>Toys and Plushies</h5>
-                </div>
-                <div class="content-container grid-item card" style="grid-area: box-9">
-                    <img src="media/images/products/puzzles.jpg" alt="Puzzles and Accessories">
-                    <h5>Puzzles & Accessories</h5>
+                <img src="media/images/events/pokemon.avif">
+                <div id="countdown">
+                    <div><span id="days">58</span>Days</div>
+                    <div><span id="hrs">10</span>Hours</div>
+                    <div><span id="mins">14</span>Minutes</div>
+                    <div><span id="secs">48</span>Seconds</div>
                 </div>
             </div>
-        </section>
-        <section id="outro">
+            <div class="content-container grid-item card" style="grid-area: box-2">
+                <img src="media/images/products/boardgames.jpeg" alt="Boardgames">
+                <h5>Boardgames</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-3">
+                <img src="media/images/products/artsupplies.jpg" alt="Art Supplies">
+                <h5>Art Supplies</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-4">
+                <img src="media/images/products/dioramakits.jpg" alt="Diorama Kits">
+                <h5>Diorama Kits</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-5">
+                <img src="media/images/products/dNdPara.jpg" alt="Dungeons & Dragons Paraphanelia">
+                <h5>Dungeons & Dragons Paraphanelia</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-6">
+                <img src="media/images/products/manga&figurines.jpeg" alt="Mange & Figurines">
+                <h5>Manga & Figurines</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-7">
+                <img src="media/images/products/mtg.jpg" alt="Magic the Gathering">
+                <h5>Magic the Gathering</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-8">
+                <img src="media/images/products/plushies.jpg" alt="Plushies and Toys">
+                <h5>Toys and Plushies</h5>
+            </div>
+            <div class="content-container grid-item card" style="grid-area: box-9">
+                <img src="media/images/products/puzzles.jpg" alt="Puzzles and Accessories">
+                <h5>Puzzles & Accessories</h5>
+            </div>
+        </div>
+        <div id="outro">
+            <div class="image-container">
+                <img class="opacity-image" src="media/images/rook.png" alt="rook chess piece">
+            </div>
             <h3 class="content-container">Come on down and find something new today!</h3>
-        </section>
+            <div class="image-container">
+                <img class="opacity-image" src="media/images/rook.png" alt="rook chess piece">
+            </div>
+        </div>
     </main>
     <footer>
         <div id="socials">

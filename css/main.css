@@ -8,6 +8,7 @@
 * {
     box-sizing: border-box;
 }
+
 :root {
     /*Color Variables*/
     --primary-color-rgba: rgba(245, 245, 245, 1);
@@ -53,70 +54,51 @@ main {
 }
 
 /* Page Header */
-.page-header {
-    position: relative;
-    width: 100%;
-
-
-    
-    height: auto;
-    display: flex;
-    flex-direction: column;
+#header-grid {
     background-color: var(--background-color-hsla);
     background-color: var(--background-color-rgba);
-    border-bottom: 20px solid var(--background-color-hsla);
-    border-bottom: 20px solid var(--background-color-rgba);
-}
-
-.page-header h1 {
+    display: grid;
     width: 100%;
-    text-align: center;
+    height: auto;
 }
-
-
 
 /*Navigation Bar*/
-.header-nav {
-    background-color: var(--boxshadow-primary-hsla);
-    background-color: var(--boxshadow-primary-rgba);
-    padding: 15px 0 10px 0;
-    z-index: 2;
+#navBar {
+    display: grid;
+}
+
+nav {
+    background-color: var(--secondary-color-hsla);
+    background-color: var(--secondary-color-rgba);
+}
+
+nav li {
+    width: 200px;
+    height: auto;
+}
+
+nav a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border: 3px solid var(--secondary-color-rgba);
 }
 
 nav a:hover {
-    color: var(--secondary-color-hsla);
-    color: var(--secondary-color-rgba);
-
+    color: var(--primary-color-hsla);
     box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
     border-radius: 9px;
-    border: 5px solid var(--secondary-background-color-rgba);
-}
-
-
-/*Footer*/
-footer {
-    width: 100%;
-    height: auto;
-    background-color: var(--background-color-rgba);
-    background-color: var(--background-color-hsla);
-}
-
-#socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-#quick-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
+    border: 3px solid var(--primary-color-rgba);
 }
 
 
 
-/*Content*/
+
+
+
+/*Content Styles*/
+
+/*Style for generic content blocks*/
 .content-container {
     width: 100%;
     height: auto;
@@ -134,7 +116,7 @@ p {
     color: var(--primary-color-hsla);
 }
 
-/*links*/
+/*link styles, visited, focus, hover*/
 a,
 a:visited {
     color: var(--primary-color-hsla);
@@ -144,13 +126,15 @@ a:visited {
     text-decoration: none;
 }
 
+a:focus {}
+
 a:hover {
     color: var(--secondary-color-hsla);
     color: var(--secondary-color-rgba);
 }
 
 
-/*headings*/
+/*Headings*/
 h1,
 h2,
 h3,
@@ -162,39 +146,37 @@ h6 {
     text-align: center;
 }
 
+/*Make h1 and h2 headings uppercase*/
 h1,
 h2 {
     text-transform: uppercase;
 }
 
-/*gradient border around event slideshow container*/
-.gradient-border {
-    border: 10px solid transparent;
-    border-radius: 12px;
-    background:
-        linear-gradient(white, white) padding-box,
-        linear-gradient(-45deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,
-            rgba(141, 108, 0, 0.9) 70%, rgba(70, 70, 70, 0.3) 75%) border-box;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    animation: border_shift 3s linear infinite;
-    background-size: 500% 100%;
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--background-color-rgba);
+    background-color: var(--background-color-hsla);
 }
 
-/*animate the gradient border*/
-@keyframes border_shift {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 50% 0%;
-    }
-
-    100% {
-        background-position: 100% 0%;
-    }
+/*Links to socials*/
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
+
+/*footer quick info*/
+#quick-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
 
 /**********************
 Mobile screen sizes
@@ -205,6 +187,7 @@ Mobile screen sizes
         padding: 5px;
     }
 
+    /*Heading Sizes*/
     h1 {
         font-size: 1.5rem;
     }
@@ -222,81 +205,73 @@ Mobile screen sizes
     }
 
     h5 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
 
-    /**************************
-    Mobile Header and footer
-    *******************/
+    /*Header Styles*/
+    #header-grid {
+        display: grid;
+        grid-template-columns: 50px 1fr 100px;
+        grid-template-rows: 100px auto;
+        grid-template-areas:
+            "navicon title logo"
+            "nav . .";
+    }
 
-    /*Top Row Contains Logo and Business Name*/
-    .page-header-top-row {
+
+    #title {
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
+        align-content: center;
     }
+
 
     /*Rotated Logo*/
-    .logo {
-        width: 150%;
-        height: auto;
-        object-fit: contain;
+    .rotatedImg {
+        max-width: 100px;
         border-radius: 15px 0 0 15px;
-        transform: translate(-10%, 0%) rotateY(-25deg);
-        z-index: 1;
-
+        transform: translate(10%, 0%) rotateY(-35deg);
     }
 
+    /*The logo is a link to the homepage*/
     #logo-link {
-        width: 80px;
-        height: auto;
+        width: fit-content;
+        height: fit-content;
         background-color: transparent;
         perspective: 400px;
     }
 
-    nav {
-        display: none;
-    }
-
-    .navicon {
-        width: 200%;
+    /*Navigation*/
+    #navIconContainer {
+        width: 100%;
         height: auto;
-    }
-    .navContainer {
-        display: block;
-        width: fit-content;
-        height: fit-content;
-    }
-
-    nav ul {
-        background-color: var(--background-color-hsla);
+        padding: 3px;
+        align-content: center;
         background-color: var(--background-color-rgba);
-        border-radius: 0 0 12px 0;
-        position: absolute;
-        width: fit-content;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 15px;
-        z-index: 100;
+        background-color: var(--background-color-hsla);
     }
 
-    nav ul li {
-        margin-right: 5px;
+    #navicon {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
+    #navBar {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        z-index: 5;
+        display: none;
+        height: fit-content;
+        width: 100%;
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     nav a {
         white-space: nowrap;
-        padding: 3px 12px 0px 12px;
-        border-radius: 9px;
+        padding: 5px;
     }
 
     footer a,
@@ -318,6 +293,8 @@ Tablet and Desktop screen sizes
     main {
         padding: 20px 50px;
     }
+
+    /*Heading sizes*/
     h1 {
         font-size: 2rem;
     }
@@ -327,76 +304,126 @@ Tablet and Desktop screen sizes
     }
 
     h3 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     h4 {
-        font-size: 1.4rem;
-    }
-
-    h5 {
         font-size: 1.2rem;
     }
 
-    /*Tablet and Desktop Header and Footer*/
+    h5 {
+        font-size: 1rem;
+    }
 
-    /*Top Row Contains Logo and Business Name*/
-    .page-header-top-row {
+    /*Header Styles*/
+    #header-grid {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 200px auto;
+        grid-template-areas:
+            "logo title"
+            "navicon nav";
+    }
+
+
+    #title {
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
+        align-content: center;
     }
+
 
     /*Rotated Logo*/
-    .logo {
-        width: 150%;
-        height: auto;
-        object-fit: contain;
+    .rotatedImg {
+        max-width: 200px;
         border-radius: 0 15px 15px 0;
         transform: translate(-10%, 0%) rotateY(35deg);
-        z-index: 1;
-
     }
 
-    .navicon {
-        display: none;
-    }
-
-    nav {
-        display: block;
-        margin-left: 150px;
-    }
-
+    /*The logo is a link to the homepage*/
     #logo-link {
-        width: 150px;
-        height: auto;
+        width: fit-content;
+        height: fit-content;
         background-color: transparent;
         perspective: 400px;
     }
 
-    nav ul {
+    /*Navigation*/
+    #navIconContainer {
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
+        background-color: var(--secondary-color-rgba);
+        background-color: var(--secondary-color-hsla);
     }
+
+    #navicon {
+        display: none;
+        justify-self: center;
+        width: 50px;
+        height: auto;
+    }
+
+    nav {
+        background-color: var(--secondary-color-rgba);
+        background-color: var(--secondary-color-hsla);
+        height: auto;
+        width: 100%;
+    }
+
+    #navBar {
+        height: fit-content;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        padding-bottom: 10px;
+    }
+
+
+
+
 
     nav a {
         white-space: nowrap;
-        padding: 3px 12px 0px 12px;
+        padding: 5px;
+        transform: translate(0, -50%);
         border-radius: 9px;
     }
 
+    /*Footer*/
     #socials a {
         padding: 15px;
     }
 
 
+}
+
+
+/*gradient border used on multiple pages for special elements*/
+.gradient-border {
+    border: 10px solid transparent;
+    border-radius: 12px;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(-45deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,
+            rgba(141, 108, 0, 0.9) 70%, rgba(70, 70, 70, 0.3) 75%) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    animation: border_shift 3s linear infinite;
+    background-size: 500% 100%;
+}
+
+/*animation for the gradient border*/
+@keyframes border_shift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
 }

@@ -17,25 +17,28 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="page-header-top-row">
-            <a href="index.html" id=logo-link>
-                <img class="logo" src="media/images/logo.jpg" alt="Sanctuary Games" />
-            </a>
-            <h1 class="title">Sanctuary Games</h1>
-            <div class="navContainer" onclick="toggleNav()">
-                <img class="navicon" src="media/images/navicon.png">
-            </div>
+    <header id="header-grid">
+        <a class="header-grid-item" id=logo-link style="grid-area: logo" href="index.html" >
+            <img class="rotatedImg" src="media/images/logo.jpg" alt="Sanctuary Games" />
+        </a>
+
+        <div class="header-grid-item" id="title" style="grid-area: title">
+            <h1>Sanctuary Games</h1>
         </div>
-        <nav class="header-nav" id="topNav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="play_space.html">Our Space</a></li>
-                <li><a href="menu.html">Food & Drinks</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="code_of_conduct.html">Code of Conduct</a></li>
-                <li><a class="current-page" href="contact.html">Join Our Team!</a></li>
-                <li><a href="">reference</a></li>
+
+        <div class="header-grid-item" id="navIconContainer" style="grid-area: navicon" onclick="toggleNav()">
+            <img id="navicon" src="media/images/navicon.png">
+        </div>
+
+        <nav class="header-grid-item" style="grid-area: nav">
+            <ul id="navBar">
+                <li class="navItem"><a href="index.html">Home</a></li>
+                <li class="navItem"><a href="play_space.html">Our Space</a></li>
+                <li class="navItem"><a href="menu.html">Food & Drinks</a></li>
+                <li class="navItem"><a href="products.html">Our Products</a></li>
+                <li class="navItem"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                <li class="navItem"><a class="current-page" href="contact.html">Join Our Team!</a></li>
+                <li class="navItem"><a href="">reference</a></li>
             </ul>
         </nav>
     </header>
@@ -76,7 +79,8 @@
                     </div>
                     <div class="formRow" style="flex-direction: column;">
                         <label for="message">Your message:</label>
-                        <textarea name="custMessage" id="message" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+                        <textarea name="custMessage" id="message" rows="4" cols="20" maxlength="500"
+                            autocomplete="off"></textarea>
                     </div>
                     <div class="formRow">
                         <label for="gameSpin">How often do you play tabletop games? (# per month) </label>
@@ -99,7 +103,7 @@
                 </div>
             </form>
         </div>
-        <div class="grid-item" id ="contact-image-container" style="grid-area: img;">
+        <div class="grid-item" id="contact-image-container" style="grid-area: img;">
             <img src="media/images/yellow and white duck plush toy on green grass during daytime_edited.jpg">
         </div>
         <div class="grid-item" style="grid-area: application;">
@@ -130,7 +134,8 @@
                     </div>
                     <div class="formRow" style="flex-direction: column;">
                         <label for="experience">Experience</label>
-                        <textarea name="custExperience" id="experience"rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+                        <textarea name="custExperience" id="experience" rows="4" cols="20" maxlength="500"
+                            autocomplete="off"></textarea>
                     </div>
                 </fieldset>
                 <div class="formRow" id="buttons">
