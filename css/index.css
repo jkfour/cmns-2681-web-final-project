@@ -87,6 +87,13 @@ section {
     margin: 20px 0 10px 0;
 }
 
-.contact-block a {
-    margin-bottom: 6px;
+.contact-block > div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-block a:not(:has(> img)):hover {
+    background-color: white;
 }

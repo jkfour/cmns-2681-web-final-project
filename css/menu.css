@@ -15,6 +15,11 @@ main img {
     display: grid;
     margin: auto;
 }
+h3 img {
+    display: inline;
+    width: 1.4em;
+    vertical-align: middle;
+}
 
 .grid-item {
     width: 100%;
