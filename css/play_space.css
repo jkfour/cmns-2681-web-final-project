@@ -16,6 +16,9 @@ main {
 #description {
     margin-bottom: 50px;
 }
+#description p {
+    padding-top: 20px;
+}
 
 
 
@@ -48,13 +51,17 @@ main {
     main {
         padding: 30px 150px;
     }
+
+    #description {
+        width: 50%;
+    }
     .playspace-grid {
-        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-columns: 0.25fr 0.5fr 0.25fr;
         grid-template-rows: 0.4fr 0.3fr 0.3fr;
         grid-template-areas:
-            "video video"
-            "img1 closing"
-            "img1 img2";
+            ". video ."
+            "img1 . closing"
+            "img1 . img2";
         padding: 30px;
         gap: 15px;
     }

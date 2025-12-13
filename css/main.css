@@ -88,7 +88,6 @@ nav a:hover {
     color: var(--primary-color-hsla);
     box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
     border-radius: 9px;
-    border: 3px solid var(--primary-color-rgba);
 }
 
 
@@ -106,8 +105,8 @@ nav a:hover {
     padding: 30px;
     background-color: var(--background-color-rgba);
     background-color: var(--background-color-hsla);
-    border: 3px solid var(--primary-color-hsla);
-    border: 3px solid var(--primary-color-rgba);
+    box-shadow: 0 0 15px 7px var(--boxshadow-primary-hsla);
+    box-shadow: -0 0 15px 7px var(--boxshadow-secondary-hsla);
     border-radius: 25px;
 }
 
@@ -152,11 +151,39 @@ h2 {
     text-transform: uppercase;
 }
 
+dl {
+    color: var(--primary-color-hsla);
+    margin-top: 30px;
+}
+
+dt {
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+dd {
+        font-style: italic;
+
+    margin: 5px 0 5px 50px;
+}
+
+dd::before {
+    content: "↪";
+    margin-right: 5px;
+}
+
+blockquote {
+    color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+    font-style: italic;
+}
+
 
 /*Footer*/
 footer {
     width: 100%;
     height: auto;
+    margin-top: 30px;
     background-color: var(--background-color-rgba);
     background-color: var(--background-color-hsla);
 }

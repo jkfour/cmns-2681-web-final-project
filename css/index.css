@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-#info-block {
-    width: 100%;
-    height: auto;
-    display: flex;
-    gap: 30px;
-}
 
 /*Drop cap*/
 .drop-cap::first-letter {
@@ -15,85 +9,104 @@
     margin-right: 0.1em;
 }
 
-section {
-    width: 100%;
-    height: auto;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/*Mobile Screen Sizes*/
-@media screen and (max-width: 800px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-    section {
-        margin: 10px 0;
-    }
+/*Customer Quote*/
+#quote {
+    white-space: pre-wrap;
+}
+#quote::before {
+    color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+    font-style: normal;
+    content: "Customer Name: ";
     
-    #info-block {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .about-us {
-        padding: 10px;
-        max-width: 250px;
-    }
 }
-
-
-/*Tablet and Desktop sizes*/
-@media screen and (min-width: 801px) {
-    main {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    section {
-        margin: 10px;
+/*business offers description list*/
+#business-offers dl {
+        text-align: center;
+        align-content: center;
     }
 
-    #info-block {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
 
-    .contact-block {
-        margin-right: 0;
-    }
-
-}
-
-/*Container for Contact Content*/
-.contact-block {
-    width: fit-content;
+/*Contact Content*/
+#hours-contact {
     display: flex;
     flex-direction: column;
 }
 
 /*Contact Block Content*/
-.contact-block h3:first-of-type {
+#hours-contact h3:first-of-type {
     margin-bottom: 10px;
 }
 
-.contact-block h3:last-of-type {
+#hours-contact h3:last-of-type {
     margin: 20px 0 10px 0;
 }
 
-.contact-block > div {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 5px;
+#hours-contact > p, div{
+    text-align: center;
 }
 
-.contact-block a:not(:has(> img)):hover {
+#hours-contact a:not(:has(> img)):hover {
     background-color: white;
+}
+
+
+
+
+/*Mobile and Tablet Screen Sizes*/
+@media screen and (max-width: 1299px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+/*Desktop sizes*/
+@media screen and (min-width: 1300px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    article {
+        width: 70%;
+        height: auto;
+        padding: 0 10%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+
+
+    aside {
+        width: 30%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    #calendar {
+        width: 100%;
+        height: 100%;
+    }
 }

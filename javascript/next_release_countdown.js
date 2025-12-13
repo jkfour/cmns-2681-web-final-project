@@ -12,7 +12,7 @@ function runClock() {
 
 
     /*Calculate the days until the next release*/
-    var newRelease = new Date("February 18, 2026");
+    var newRelease = new Date("02/18/2026");
     var nextYear = currentDay.getFullYear() + 1;
     newRelease.setFullYear(nextYear);
     var daysLeft = (newRelease - currentDay) / (1000 * 60 * 60 * 24);
@@ -20,7 +20,9 @@ function runClock() {
     var minsLeft = (hrsLeft - Math.floor(hrsLeft)) * 60;
     var secsLeft = (minsLeft - Math.floor(minsLeft)) * 60;
 
-    /*Display the time left until New Year's Eve*/
+    /*Display the release date and time left until the next release*/
+document.getElementById("release-date").textContent = "Coming " + newRelease.toLocaleDateString() + ":";
+
     document.getElementById("days").textContent = Math.floor(daysLeft);
     document.getElementById("hrs").textContent = Math.floor(hrsLeft);
     document.getElementById("mins").textContent = Math.floor(minsLeft);
