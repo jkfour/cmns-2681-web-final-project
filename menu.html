@@ -7,6 +7,9 @@
     -->
 
     <meta charset="utf-8" />
+    <meta name="description" content="Hobby and Games Shop">
+    <meta name="keywords" content="Hobby, Boardgame, Cardgame">
+    <meta name="author" content="Keegan Fournier">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanctuary Games</title>
     <link href="css/reset.css" rel="stylesheet">
@@ -19,8 +22,8 @@
 </head>
 
 <body>
-   <header id="header-grid">
-        <a class="header-grid-item" id=logo-link style="grid-area: logo" href="index.html" >
+    <header id="header-grid">
+        <a class="header-grid-item" id=logo-link style="grid-area: logo" href="index.html">
             <img class="rotatedImg" src="media/images/logo.jpg" alt="Sanctuary Games" />
         </a>
 
@@ -40,11 +43,12 @@
                 <li class="navItem"><a href="products.html">Our Products</a></li>
                 <li class="navItem"><a href="code_of_conduct.html">Code of Conduct</a></li>
                 <li class="navItem"><a class="current-page" href="contact.html">Join Our Team!</a></li>
-                <li class="navItem"><a href="">reference</a></li>
+                <li class="navItem"><a href="reference.html">reference</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <article>
             <div class="grid-container">
                 <div class="content-container grid-item" style="grid-area: open">
                     <h2>Our Menus</h2>
@@ -57,21 +61,23 @@
                     src="media/images/menu/SANCTUARY GAMES (6).png" alt="Drinks Menu">
                 <img class="grid-item gradient-border" style="grid-area: pearls" onclick="scaleImage(this, 'portrait')"
                     src="media/images/menu/SANCTUARY GAMES (7).png" alt="Pearl Options">
-                <img class="grid-item gradient-border" style="grid-area: general" onclick="scaleImage(this, 'landscape')"
+                <img class="grid-item gradient-border" style="grid-area: general"
+                    onclick="scaleImage(this, 'landscape')"
                     src="media/images/menu/Copy of Copy of TaroTapioca_edited.jpg" alt="General Menu">
                 <div class="content-container grid-item" style="grid-area: close">
-                    <h3><img src= "media/images/cookie.png" alt="cookie"> Enjoy a tasty beverage and a hot snack! <img src= "media/images/cookie.png" alt="cookie"></h3>
+                    <h3 id="static"><img src="media/images/cookie.png" alt="cookie"> Enjoy a tasty beverage and a hot
+                        snack! <img src="media/images/cookie.png" alt="cookie"></h3>
                 </div>
             </div>
-
+        </article>
         <div id="expandedImageContainer" onclick="reset()"></div>
         <div id="overlay" onclick="reset()"></div>
     </main>
     <footer>
         <div id="socials">
-            <a href="">facebook</a>
-            <a href="">X</a>
-            <a href="">linkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">linkedIn</a>
         </div>
         <div id="quick-info">
             <p>&copy; 2025</p>

@@ -2,6 +2,8 @@
 
 main {
     display: grid;
+    background-image: url("../media/images/hotel-wallpaper-black.webp");
+    background-size: 50%;
 }
 
 main img {
@@ -71,7 +73,7 @@ h3 img {
 /*Tablet and Desktop Screen Sizes*/
 @media screen and (min-width: 1161px) {
     main {
-        padding: 30px;
+        padding: 50px 30px;
     }
     .grid-container {
         grid-template-columns: 0.5fr 1fr 0.5fr;

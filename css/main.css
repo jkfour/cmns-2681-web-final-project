@@ -115,7 +115,7 @@ p {
     color: var(--primary-color-hsla);
 }
 
-/*link styles, visited, focus, hover*/
+/*link styles, visited, focus, hover, attributes(link destination)*/
 a,
 a:visited {
     color: var(--primary-color-hsla);
@@ -125,13 +125,16 @@ a:visited {
     text-decoration: none;
 }
 
-a:focus {}
-
+a:focus,
 a:hover {
     color: var(--secondary-color-hsla);
     color: var(--secondary-color-rgba);
 }
 
+a[data-destination="external"] {
+    background-color: var(--primary-color-hsla);
+    color: var(--secondary-color-hsla);
+}
 
 /*Headings*/
 h1,
@@ -162,7 +165,7 @@ dt {
 }
 
 dd {
-        font-style: italic;
+    font-style: italic;
 
     margin: 5px 0 5px 50px;
 }
@@ -247,10 +250,14 @@ Mobile screen sizes
     }
 
 
-    #title {
+    .title {
         width: 100%;
         height: auto;
         align-content: center;
+    }
+
+    .title h1 {
+        text-shadow: 2px 2px red;
     }
 
 
@@ -299,12 +306,6 @@ Mobile screen sizes
     nav a {
         white-space: nowrap;
         padding: 5px;
-    }
-
-    footer a,
-    p {
-        font-size: 0.8em;
-
     }
 
     #socials a {

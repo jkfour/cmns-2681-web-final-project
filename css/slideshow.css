@@ -5,9 +5,10 @@
 }
 
 .slides-container {
-    width: 100%;
+    width: fit-content;
     height: 100%;
     position: relative;
+    margin: auto;
 }
 
 /* Hide the images by default */
@@ -29,7 +30,7 @@
 
 .event-img {
     width: 100%;
-    height: 100%;
+    height: 60vh;
     object-fit: contain;
 }
 
@@ -39,7 +40,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--background-color-hsla);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +64,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--background-color-hsla);
     z-index: 3;
 }
 

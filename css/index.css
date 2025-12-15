@@ -3,12 +3,11 @@
 
 /*Drop cap*/
 .drop-cap::first-letter {
-    font-size: 4em;
+    font-size: 2.3em;
     float: left;
     line-height: 1;
     margin-right: 0.1em;
 }
-
 
 /*Customer Quote*/
 #quote {

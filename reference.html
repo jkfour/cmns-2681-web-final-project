@@ -1,0 +1,162 @@
+<style>
+    section {
+        margin: 50px 20px;
+    }
+
+    #websites {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+</style>
+
+<section id="websites">
+    <div>
+        <h3> 3 websites similar in nature</h3>
+        <a href="https://imperialhobbies.ca/" target="_blank">Imperial Hobbies</a>
+        <p>
+
+        </p>
+        <a href="https://strategiesgames.ca/" target="_blank">Strategies Games & Hobbies</a>
+        <p>
+
+        </p>
+        <a href="https://www.kbhobbies.com/" target="_blank">K&B Hobbies & Games</a>
+        <p>
+
+        </p>
+    </div>
+    <div>
+        <h3>3 websites of downloadable assets</h3>
+        <a href="https://freesound.org/" target="_blank">Freesound.org</a>
+        <p>
+
+        </p>
+        <a href="https://www.pexels.com/" target="_blank">Pexels.com</a>
+        <p>
+
+        </p>
+        <a href="https://unsplash.com/" target="_blank">Unsplash.com</a>
+        <p>
+
+        </p>
+    </div>
+    <div>
+        <h3> 3 websites of technical information</h3>
+        <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a>
+        <p>
+
+        </p>
+        <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
+        <p>
+
+        </p>
+        <a href="https://stackoverflow.com/questions" target="_blank">Stack Overflow</a>
+        <p>
+
+        </p>
+    </div>
+</section>
+
+<section id="minimum required features">
+    <section id="html-features">
+        <h3>Html Features</h3>
+        <p>Structural tags are used through the website. Each page has a header containing an unordered list, a main,
+            and a footer block. The main block is divided into sections where appropriate, with the <a
+                href="index.html">home</a> page having content separated into an article and aside. Other notable tags
+            are <a href="index.html#blockquote">blockquote</a> <a href=code_of_conduct.html#orderedlist>ol</a> <a
+                href=index.html#business-offers>dl</a></p>
+        <p>Inline images, both <a href="menu.html#static">static (the cookies)</a> and <a
+                href="index.html#hours-contact">clickable (the phone and email symbols in the contact block)</a></p>
+        <p>Special characters include &copy; in the footer of each page, and &#10094; and &#10095; used as arrows to
+            navigate the event slideshow on the <a href="index.html">index</a> page </p>
+        <p>Meta tags used for charset, description, keywords, author and viewport</p>
+    </section>
+    <section id="CSS">
+        <h3>CSS</h3>
+        <p>Specific contextual selectors: e > f used on <a href="index.html#hours-contact">hours and contact info</a>, e + f used on the <a href="code_of_conduct.html#e+f">first paragraph</a>.
+             Attribute selectors used on links to social media accounts in the footers, as well as the submit and reset buttons on the <a href="contact.html">contact page</a></p>
+        <p>Dynamic pseudo-classes used on all text links, :focus used on the <a href="contact.html">form elements</a>, first of type and last of type used on the <a href="index.html">event slideshow</a> info paragraphs at the bottom of the slides.</p>
+        <p>Borders and rounded corners used extensively, background-image and size on the <a href="menu.html">menu</a> page, along with background-clip and origin on the menu image borders.</p>
+        <a href="index.html#dropcap">Drop-cap.</a>
+        <p>Layout tecniques: Grid:<a href="menu.html">Menu</a> & <a href="play_space.html">Our Space</a> & <a href="products.html">Products</a>. Flex: <a href="index.html">Index</a>. Float: <a href="code_of_conduct.html">Code of Conduct</a>. Positioning: Fixed positioning used on <a href="menu.html">Menu</a> images that are expanded when clicked. Absolute position used on the event <a href="index.html">Slideshow</a> card headers and footers.</p>
+        <p>Text shadow used on website title in header, box shadow used on navigation links and containers throughout the website.</p>
+    
+    
+    
+    </section>
+    <section id="Web form">
+        <h3>Web Form</h3>
+    </section>
+    <section id="multimedia">
+        <h3>Multimedia</h3>
+    </section>
+    <section id="JavaScript">
+        <h3>Javascript</h3>
+    </section>
+</section>
+
+<section id="Documentation">
+    <a href="" target="_blank">Documentation PDF Link</a>
+</section>
+
+<section id="evaluation-form">
+    <form id="survey" action="http://www.example.com/redball/survey" method="post">
+        <fieldset id="custInfo">
+            <legend>Leave Us a Message!</legend>
+            <br>
+            <div class="formRow">
+                <label for="name">Name*</label>
+                <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
+            </div>
+            <div class="formRow">
+                <label for="city">City</label>
+                <input name="custCity" id="city" type="text" value="Salmon Arm" />
+            </div>
+            <div class="formRow">
+                <label for="prov">Province</label>
+                <input name="custProv" id="prov" type="text" value="BC" />
+            </div>
+            <div class="formRow">
+                <label for="phone">Phone Number</label>
+                <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+                    pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}S" />
+            </div>
+            <div class="formRow">
+                <label for="mail">E-mail*</label>
+                <input name="custEmail" id="mail" type="email" required />
+            </div>
+            <div class="formRow">
+                <label for="messageInfo">Is your message about one of the following?</label>
+                <select name="msgInfo" id="messageInfo" size="3" multiple>
+                    <option value="internet">Current Stock</option>
+                    <option value="mag">Pre-Releases</option>
+                    <option value="news">Events</option>
+                </select>
+            </div>
+            <div class="formRow" style="flex-direction: column;">
+                <label for="message">Your message:</label>
+                <textarea name="custMessage" id="message" rows="4" cols="20" maxlength="500"
+                    autocomplete="off"></textarea>
+            </div>
+            <div class="formRow">
+                <label for="gameSpin">How often do you play tabletop games? (# per month) </label>
+                <input name="gameTimes" id="gameSpin" type="number" value="1" step="1" min="0" max="30" />
+            </div>
+            <div class="formRow">
+                <label for="favGame">Do you have a favourite game?</label>
+                <input name="gameFav" id="favGame" type="text" />
+
+            </div>
+            <div class="formRow" id="mailCheck">
+                <label for="mailCB">I would like to join the mailing list for updates on products and
+                    events!</label>
+                <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+            </div>
+        </fieldset>
+        <div class="formRow" id="buttons">
+            <input type="submit" value="Send" />
+            <input type="reset" value="Reset" />
+        </div>
+    </form>
+</section>
