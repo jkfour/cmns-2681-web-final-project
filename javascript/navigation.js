@@ -1,7 +1,7 @@
 'use-strict'
 
 
-//does not detect double tap resizes!!!!!
+//does not detect double tap resizing from browser title!
 
 //A handler for the navigation bar//
 

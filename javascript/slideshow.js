@@ -1,26 +1,35 @@
 'use strict'
 
+//Handles the navigation and automatic transition of a slideshow container
 
 
 //make a variable for the slide index
 let slideIndex = 1;
+//variable for the transition interval id
+let intervalID = null;
 
 showSlides(slideIndex);
-
+startInterval()
 
 
 //Next and previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  //reset the transition interval
+  clearInterval(intervalID);
+  startInterval();
 }
 
 //Bubble controls for selecting a specific slide
 function currentSlide(n) {
   showSlides(slideIndex = n);
+  //reset the transition interval
+  clearInterval(intervalID);
+  startInterval();
 }
 
 
-
+//function to display the slide at index n
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -37,9 +46,11 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 } 
 
-//display the slide found at the index
-window.setInterval(transition, 3000);
-
+//change to the next slide every 5 seconds
+function startInterval(){
+intervalID = setInterval(transition, 5000);
+}
+//function to transition to the next slide
 function transition(){
   slideIndex += 1;
   showSlides(slideIndex);

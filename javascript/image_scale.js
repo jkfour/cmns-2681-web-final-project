@@ -65,16 +65,9 @@ function scaleImage(img, orientation) {
     backgroundBlur();
 }
 
-//function to
-
-
 //function to toggle the dimmed overlay
 function backgroundBlur() {
-    if (scaled) {
-        overlay.style.display = "block";
-    } else {
-        overlay.style.display = "none";
-    }
+    scaled ? overlay.style.display = "block" : overlay.style.display = "none";
 }
 
 //function to remove child nodes from a specified node
