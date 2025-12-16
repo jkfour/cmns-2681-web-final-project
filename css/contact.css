@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+:root {
+--invalid-color: rgb(105, 49, 49);
+--valid-color: rgb(37, 102, 36);
+}
 
 /*Page layout styles*/
 main {
@@ -33,6 +37,7 @@ main {
 /*Form grid layouts*/
 
 form {
+   width: 100%;
    height: 100%;
    color: var(--primary-color-rgba);
    color: var(--primary-color-hsla);
@@ -58,7 +63,7 @@ fieldset {
    gap: 20px;
 }
 
-.formRow#buttons {
+#msgButtons, #appButtons {
    grid-template-columns: 1fr 1fr;
    justify-items: center;
 }
@@ -71,11 +76,16 @@ fieldset {
 /* Legend Styles */
 legend {
    background-color: var(--accent-color-hsla);
-   color: white;
+   color: var(--primary-color-hsla);
    padding: 5px;
 }
 
-/* Text Area Styles */
+select {
+   width: fit-content;
+   justify-self: end;
+   text-align: center;
+}
+
 textarea {
    box-sizing: border-box;
    min-height: 100px;
@@ -90,9 +100,9 @@ input[type='reset'] {
    padding: 5px;
 }
 
-#messageInfo {
+#msgInfo {
    justify-self: end;
-   width: 100px;
+   width: fit-content;
 }
 
 #gameSpin {
@@ -113,19 +123,35 @@ input[type='reset'] {
 
 
 /* Validation Styles */
-
-input#name:focus:valid,
-input#phone:focus:valid,
-input#mail:focus:valid {
-   color: var(--background-color-hsla);
-   background: rgb(139, 255, 139) url(rb_valid.png) bottom right/contain no-repeat;
+input, textarea {
+   color: var(--primary-color-hsla);
+   background-color: var(--secondary-color-hsla);
 }
 
-input#name:focus:invalid,
-input#phone:focus:invalid,
-input#mail:focus:invalid {
-   color: var(--background-color-hsla);
-   background: rgb(255, 171, 175) url(rb_invalid.png) bottom right/contain no-repeat;
+input:placeholder-shown {
+      background: var(--invalid-color);
+}
+
+input:has(::placeholder):not(placeholder-shown) {
+      background: var(--valid-color);
+}
+
+
+input:focus:valid:required,
+input:valid:required{
+   color: var(--primary-color-hsla);
+   background: var(--valid-color);
+}
+
+
+input:focus:invalid, input:invalid{
+   color: var(--primary-color-hsla);
+   background: var(--invalid-color);
+}
+
+input:focus, textarea:focus {
+   color: var(--secondary-color-hsla);
+   background: var(--primary-color-hsla);
 }
 
 

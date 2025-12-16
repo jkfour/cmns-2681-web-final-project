@@ -47,34 +47,49 @@
     </header>
     <main>
         <div class="grid-item" style="grid-area: message;">
-            <form id="survey" action="http://www.example.com/redball/survey" method="post">
-                <fieldset id="custInfo">
+            <form id="messageForm" action="http://www.example.com/redball/survey" method="post">
+                <fieldset>
                     <legend>Leave Us a Message!</legend>
                     <br>
                     <div class="formRow">
-                        <label for="name">Name*</label>
-                        <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
+                        <label for="msgName">Name*</label>
+                        <input name="msgName" id="msgName" type="text" placeholder=" " required />
                     </div>
                     <div class="formRow">
-                        <label for="city">City</label>
-                        <input name="custCity" id="city" type="text" value="Salmon Arm" />
+                        <label for="msgCity">City</label>
+                        <input name="msgCity" id="msgCity" type="text" value="Salmon Arm" />
                     </div>
                     <div class="formRow">
-                        <label for="prov">Province</label>
-                        <input name="custProv" id="prov" type="text" value="BC" />
+                        <label for="msgProv">Province</label>
+                        <select name="msgProv" id="msgProv">
+                            <option value="bc">BC</option>
+                            <option value="ab">AB</option>
+                            <option value="sk">SK</option>
+                            <option value="mb">MB</option>
+                            <option value="qc">QC</option>
+                            <opttion value="on">ON</opttion>
+                            <option value="pe">PE</option>
+                            <option value="nl">NL</option>
+                            <option value="nb">NB</option>
+                            <option value="ns">NS</option>
+                            <option value="nt">NT</option>
+                            <option value="nu">NU</option>
+                            <option value="yt">YT</option>
+                        </select>
                     </div>
                     <div class="formRow">
-                        <label for="phone">Phone Number</label>
-                        <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
-                            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}S" />
+                        <label for="msgPhone">Phone Number</label>
+                        <input name="msgPhone" id="msgPhone" type="tel" placeholder="nnn-nnn-nnnn"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
                     </div>
                     <div class="formRow">
-                        <label for="mail">E-mail*</label>
-                        <input name="custEmail" id="mail" type="email" required />
+                        <label for="msgMail">E-mail*</label>
+                        <input name="msgMail" id="msgMail" type="email"
+                            pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="example@org.com" required />
                     </div>
                     <div class="formRow">
-                        <label for="messageInfo">Is your message about one of the following?</label>
-                        <select name="msgInfo" id="messageInfo" size="3" multiple>
+                        <label for="msgInfo">Is your message about one of the following?</label>
+                        <select name="msgInfo" id="msgInfo">
                             <option value="internet">Current Stock</option>
                             <option value="mag">Pre-Releases</option>
                             <option value="news">Events</option>
@@ -100,7 +115,7 @@
                         <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
                     </div>
                 </fieldset>
-                <div class="formRow" id="buttons">
+                <div class="formRow" id="msgButtons">
                     <input type="submit" value="Send" />
                     <input type="reset" value="Reset" />
                 </div>
@@ -115,25 +130,39 @@
                     <legend>Join our Team!</legend>
                     <br>
                     <div class="formRow">
-                        <label for="name">Name*</label>
-                        <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
+                        <label for="appName">Name*</label>
+                        <input name="custName" id="appName" type="text" placeholder="First & Last Name" required />
                     </div>
                     <div class="formRow">
-                        <label for="city">City</label>
-                        <input name="custCity" id="city" type="text" value="Salmon Arm" required />
+                        <label for="appCity">City</label>
+                        <input name="appCity" id="appCity" type="text" value="Salmon Arm" required />
                     </div>
                     <div class="formRow">
-                        <label for="prov">Province</label>
-                        <input name="custProv" id="prov" type="text" value="BC" required />
+                        <label for="appProv">Province</label>
+                        <select name="appProv" id="appProv">
+                            <option value="bc">BC</option>
+                            <option value="ab">AB</option>
+                            <option value="sk">SK</option>
+                            <option value="mb">MB</option>
+                            <option value="qc">QC</option>
+                            <opttion value="on">ON</opttion>
+                            <option value="pe">PE</option>
+                            <option value="nl">NL</option>
+                            <option value="nb">NB</option>
+                            <option value="ns">NS</option>
+                            <option value="nt">NT</option>
+                            <option value="nu">NU</option>
+                            <option value="yt">YT</option>
+                        </select>
                     </div>
                     <div class="formRow">
-                        <label for="phone">Phone Number</label>
-                        <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
-                            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}S" required />
+                        <label for="appPhone">Phone Number</label>
+                        <input name="appPhone" id="appPhone" type="tel" placeholder="nnn-nnn-nnnn"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
                     </div>
                     <div class="formRow">
-                        <label for="mail">E-mail*</label>
-                        <input name="custEmail" id="mail" type="email" required />
+                        <label for="appMail">E-mail*</label>
+                        <input name="appEmail" id="appMail" type="email" placeholder="example@org.com" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" required />
                     </div>
                     <div class="formRow" style="flex-direction: column;">
                         <label for="experience">Experience</label>
@@ -141,7 +170,7 @@
                             autocomplete="off"></textarea>
                     </div>
                 </fieldset>
-                <div class="formRow" id="buttons">
+                <div class="formRow" id="appButtons">
                     <input type="submit" value="Submit" />
                     <input type="reset" value="Reset" />
                 </div>

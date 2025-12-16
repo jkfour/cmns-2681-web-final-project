@@ -1,10 +1,13 @@
 "use strict";
 
+//A product release countdown timer that displays
+//the day of release and the time remaining
+
 /*Execute the function to run and display the countdown clock*/
 runClock();
 setInterval("runClock()", 1000)
 
-/*Function to create and run the countdown clock*/
+/*Create and run the countdown clock*/
 function runClock() {
 
     /*Store the current date*/
@@ -21,7 +24,7 @@ function runClock() {
     var secsLeft = (minsLeft - Math.floor(minsLeft)) * 60;
 
     /*Display the release date and time left until the next release*/
-document.getElementById("release-date").textContent = "Coming " + newRelease.toLocaleDateString() + ":";
+    document.getElementById("release-date").textContent = "Coming " + newRelease.toLocaleDateString() + ":";
 
     document.getElementById("days").textContent = Math.floor(daysLeft);
     document.getElementById("hrs").textContent = Math.floor(hrsLeft);
