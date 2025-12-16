@@ -63,15 +63,16 @@ main {
 }
 
 
-    #title {
-        width: 100%;
-        height: auto;
-        align-content: center;
-    }
-    #title h1 {
-        text-shadow:
+#title {
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+#title h1 {
+    text-shadow:
         3px 0px 2px var(--accent-color-hsla);
-    }
+}
 
 /*Navigation Bar*/
 #navBar {
@@ -172,7 +173,11 @@ dl {
 
 dt {
     font-size: 1.3rem;
-    margin-top: 15px;
+    margin: 15px auto;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: var(--secondary-color-hsla);
+    border-radius: 12px;
 }
 
 dd {
@@ -302,13 +307,117 @@ Mobile screen sizes
         grid-template-rows: repeat(auto-fit);
     }
 
+    .nested {
+        display: none;
+    }
+
     nav a {
         white-space: nowrap;
         padding: 5px;
     }
 
+    dt {
+        font-size: 1.2rem;
+    }
+
+    dd {}
+
     #socials a {
         padding: 5px;
+    }
+
+    footer a,
+    p {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/*Fit for first set of submenus*/
+@media screen and (min-width: 641px) {
+
+    /*Hide menu items that aren't nested*/
+    #navBar li:not(.nested) {
+        display: none;
+    }
+
+    #navBar > #firstSubmenu { 
+        display: grid;
+        height: fit-content;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #navBar > #firstSubmenu ul {
+        display: none;
+    }
+    #navBar > #firstSubmenu li:hover > ul {
+        display: grid;
+        height: fit-content;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        margin: 20px;
+    }
+
+    #navBar #secondSubmenu {
+        display: none;
+    }
+}
+
+/*Navbar fits 3 tabs*/
+@media screen and (min-width: 1261px){
+
+        /*Hide menu items that aren't nested*/
+    #navBar li:not(.nested) {
+        display: none;
+    }
+
+    #navBar > #secondSubmenu { 
+        display: grid;
+        height: fit-content;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #navBar > #secondSubmenu ul {
+        display: none;
+    }
+    #navBar > #secondSubmenu li:hover > ul {
+        display: grid;
+        height: fit-content;
+        width: 100%;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        margin: 20px;
+    }
+        #navBar #firstSubmenu {
+        display: none;
+    }
+}
+
+/*Navbar fits full width*/
+@media screen and (min-width: 1600px) {
+
+    /*Hide menu items that are nested*/
+    ul.subMenu{
+        display: none;
+    }
+
+    /*show menu items that aren't nested*/
+    #navBar li:not(.nested) {
+        display: block;
+    }
+    #navBar #firstSubmenu {
+        display: none;
+    }
+    #navBar #secondSubmenu {
+        display: none;
     }
 
 }
@@ -398,10 +507,6 @@ Tablet and Desktop screen sizes
         padding-bottom: 10px;
     }
 
-
-
-
-
     nav a {
         white-space: nowrap;
         padding: 5px;
@@ -413,8 +518,6 @@ Tablet and Desktop screen sizes
     #socials a {
         padding: 15px;
     }
-
-
 }
 
 

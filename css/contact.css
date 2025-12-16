@@ -32,6 +32,7 @@ main {
 
 #callback {
    width: fit-content;
+   padding: 2%;
 }
 
 /*Form grid layouts*/

@@ -74,6 +74,12 @@ h5 {
     article ol {
         margin: 5% 1%;
     }
+    article ol h3 {
+        font-size: 1.2rem;
+    }
+    ol p {
+        font-size: 1rem;
+    }
 
     article img {
         max-width: 150px;

@@ -35,12 +35,51 @@
 
         <nav class="header-grid-item" style="grid-area: nav">
             <ul id="navBar">
-                <li class="navItem"><a href="index.html">Home</a></li>
-                <li class="navItem"><a href="play_space.html">Our Space</a></li>
+                <li class="navItem"><a href="play_space.html">The Place to Play</a></li>
                 <li class="navItem"><a href="menu.html">Food & Drinks</a></li>
                 <li class="navItem"><a href="products.html">Our Products</a></li>
-                <li class="navItem"><a href="contact.html">Join Our Team!</a></li>
-                <li class="navItem"><a href="reference.html">reference</a></li>
+                <li class="navItem"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                <li class="navItem"><a href="contact.html">Send Us A Message!</a></li>
+
+                <ul id="firstSubmenu" class="subMenu">
+
+                    <li class="navItem nested">
+                        <a href="#">What We Do</a>
+                        <ul class="subMenu">
+                            <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
+                            <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
+                            <li class="navItem nested"><a href="products.html">Our Products</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navItem nested">
+                        <a href="#">Information</a>
+                        <ul class="subMenu">
+                            <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                            <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul id="secondSubmenu" class="subMenu">
+                            <li class="navItem nested"><a href="products.html">Our Products</a></li>
+                    <li class="navItem nested">
+                        <a href="#">Perks of Playing</a>
+                        <ul class="subMenu">
+                            <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
+                            <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="navItem nested">
+                        <a href="#">Information</a>
+                        <ul class="subMenu">
+                            <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                            <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <li style="display: block; position: absolute; right: 0; top: 250px; width: fit-content;"><a
+                        href="reference.html" style=" color: black; background-color: white;">reference</a></li>
             </ul>
         </nav>
     </header>
@@ -116,9 +155,9 @@
     </main>
     <footer>
         <div id="socials">
-            <a href="#">Facebook</a>
-            <a href="#">X</a>
-            <a href="#">linkedIn</a>
+            <a href="#" data-destination="external" style="border-bottom-left-radius: 12px;">Facebook</a>
+            <a href="#" data-destination="external">X</a>
+            <a href="#" data-destination="external">linkedIn</a>
         </div>
         <div id="quick-info">
             <p>&copy; 2025</p>

@@ -99,10 +99,11 @@
     height: auto;
 }
 
-#outro h3 {
+#outro p {
     flex: 1;
-    width: fit-content;
-    height: auto;
+    text-align: center;
+    margin: auto 0;
+    padding: 20px;
 }
 
 .image-container {
@@ -117,7 +118,7 @@
     width: 100px;
     height: auto;
     margin: auto;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 /*Mobile Screen Sizes*/
@@ -136,6 +137,11 @@
             "box-4 box-5"
             "box-6 box-7"
             "box-8 box-9";
+    }
+
+    .opacity-image {
+        width: 50px;
+        height: auto;
     }
 }
 
