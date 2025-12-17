@@ -8,8 +8,13 @@ let slideIndex = 1;
 //variable for the transition interval id
 let intervalID = null;
 
-showSlides(slideIndex);
-startInterval()
+//wait until all elements are loaded
+window.addEventListener('DOMContentLoaded', () => {
+  showSlides(slideIndex);
+  startInterval()
+});
+
+
 
 
 //Next and previous controls
@@ -44,14 +49,14 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-} 
+}
 
 //change to the next slide every 5 seconds
-function startInterval(){
-intervalID = setInterval(transition, 5000);
+function startInterval() {
+  intervalID = setInterval(transition, 5000);
 }
 //function to transition to the next slide
-function transition(){
+function transition() {
   slideIndex += 1;
   showSlides(slideIndex);
 }
