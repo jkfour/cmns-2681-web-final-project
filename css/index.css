@@ -54,7 +54,7 @@
 
 
 /*Mobile and Tablet Screen Sizes*/
-@media screen and (max-width: 1299px) {
+@media screen and (max-width: 1199px) {
     main {
         display: flex;
         flex-direction: column;
@@ -68,6 +68,29 @@
     }
 
     aside {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+        main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    article {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    aside {
+        width: 40%;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -90,8 +113,11 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         gap: 30px;
+    }
+
+    article section:not(#upcoming-events) {
+        max-width: 80%;
     }
 
 
