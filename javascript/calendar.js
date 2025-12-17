@@ -5,7 +5,7 @@
 
 
 //wait until all elements are loaded
-window.addEventListener('DOMContentLoaded', () => {
+window.onload() = function() {
   //Create an array of events, with a number for sunday(0) to saturday(6), and a name
   const events = [
     { day: 3, name: "Pokemon" },
@@ -89,4 +89,4 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   displayCalendar();
-});
+}
