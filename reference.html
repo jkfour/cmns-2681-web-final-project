@@ -64,7 +64,7 @@
         <p>Structural tags are used through the website. Each page has a header containing an unordered list, a main,
             and a footer block. The main block is divided into sections where appropriate, with the <a
                 href="index.html">home</a> page having content separated into an article and aside. Other notable tags
-            are <a href="index.html">blockquote</a> at the bottom of the page, <a href=code_of_conduct.html>orderd
+            are <a href="index.html">blockquote</a> at the bottom of the page, <a href=code_of_conduct.html>ordered
                 list</a> encompassing the code of conduct, and <a href=index.html#business-offers>description list</a>
             encompassing what the business offers.</p>
         <p>Inline images, both <a href="menu.html">static (the cookies at the bottom of the page)</a> and <a
@@ -130,7 +130,7 @@
             <li>The <a href="menu.html">Menu</a> page has clickable images that are expanded to cover the screen for
                 closer viewing as well as adding an overlay on the page to blur the background</li>
             <li>Form validation of the <a href="contact.html">Contact</a> forms.</li>
-            </ol>
+        </ol>
     </section>
     <section id="Responsive Design">
         <p>Most of the site is designed with at least two media queries to separate mobile and desktop screen sizes,
@@ -145,66 +145,87 @@
 
 
 <section id="Documentation">
-    <a href="" target="_blank">Documentation PDF Link</a>
+    <a href="documentation.pdf" target="_blank">Documentation PDF Link</a>
 </section>
 
 <section id="evaluation-form">
-    <form id="survey" action="" method="post">
-        <fieldset id="custInfo">
-            <legend>Leave Us a Message!</legend>
-            <br>
-            <div class="formRow">
-                <label for="name">Name*</label>
-                <input name="custName" id="name" type="text" placeholder="First & Last Name" required />
+    <form id="evalutation" action="" method="post">
+        <fieldset id="responses">
+            <div>
+                <p>Please rate the following on a scale of 1 - 5</p>
             </div>
             <div class="formRow">
-                <label for="city">City</label>
-                <input name="custCity" id="city" type="text" value="Salmon Arm" />
+                <label for="headerSpin">Header and Navigation</label>
+                <input name="header" id="headerSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+            <div class="formRow">
+                <label for="eventsSpin">Events Slideshow</label>
+                <input name="events" id="eventsSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+            <div class="formRow">
+                <label for="calendarSpin">Calendar</label>
+                <input name="calendar" id="calendarSpin" type="number" value="1" step="1" min="0" max="5" />
             </div>
             <div class="formRow">
-                <label for="prov">Province</label>
-                <input name="custProv" id="prov" type="text" value="BC" />
+                <label for="spaceSpin">Play Space Page</label>
+                <input name="space" id="spaceSpin" type="number" value="1" step="1" min="0" max="5" />
             </div>
             <div class="formRow">
-                <label for="phone">Phone Number</label>
-                <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
-                    pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}S" />
+                <label for="menuSpin">Menu Page</label>
+                <input name="menu" id="menuSpin" type="number" value="1" step="1" min="0" max="5" />
             </div>
             <div class="formRow">
-                <label for="mail">E-mail*</label>
-                <input name="custEmail" id="mail" type="email" required />
+                <label for="productSpin">Products Page</label>
+                <input name="products" id="productSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+            <div class="formRow">
+                <label for="codeSpin">Code of Conduct Page</label>
+                <input name="code" id="codeSpin" type="number" value="1" step="1" min="0" max="5" />
             </div>
             <div class="formRow">
-                <label for="messageInfo">Is your message about one of the following?</label>
-                <select name="msgInfo" id="messageInfo" size="3" multiple>
-                    <option value="internet">Current Stock</option>
-                    <option value="mag">Pre-Releases</option>
-                    <option value="news">Events</option>
-                </select>
+                <label for="contactSpin">Leave us a Message Page</label>
+                <input name="contact" id="contactSpin" type="number" value="1" step="1" min="0" max="5" />
             </div>
+
+
+
+
+            <div class="formRow">
+                <label for="overallSpin">Overall Design</label>
+                <input name="overall" id="overallSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+            <div class="formRow">
+                <label for="colorSpin">Colour Pallete</label>
+                <input name="color" id="colorSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+            <div class="formRow">
+                <label for="interactSpin">Interactivity</label>
+                <input name="interact" id="interactSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+            <div class="formRow">
+                <label for="useSpin">Usefullness</label>
+                <input name="use" id="useSpin" type="number" value="1" step="1" min="0" max="5" />
+            </div>
+
+
+
             <div class="formRow" style="flex-direction: column;">
-                <label for="message">Your message:</label>
-                <textarea name="custMessage" id="message" rows="4" cols="20" maxlength="500"
+                <label for="color">Design Choice Feedback:</label>
+                <textarea name="comments" id="color" rows="4" cols="20" maxlength="500" autocomplete="off"></textarea>
+            </div>
+
+
+            <div class="formRow" style="flex-direction: column;">
+                <label for="comments">Final comments:</label>
+                <textarea name="comments" id="comments" rows="4" cols="20" maxlength="500"
                     autocomplete="off"></textarea>
             </div>
-            <div class="formRow">
-                <label for="gameSpin">How often do you play tabletop games? (# per month) </label>
-                <input name="gameTimes" id="gameSpin" type="number" value="1" step="1" min="0" max="30" />
-            </div>
-            <div class="formRow">
-                <label for="favGame">Do you have a favourite game?</label>
-                <input name="gameFav" id="favGame" type="text" />
-
-            </div>
-            <div class="formRow" id="mailCheck">
-                <label for="mailCB">I would like to join the mailing list for updates on products and
-                    events!</label>
-                <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
-            </div>
         </fieldset>
-        <div class="formRow" id="buttons">
-            <input type="submit" value="Send" />
-            <input type="reset" value="Reset" />
-        </div>
     </form>
 </section>
