@@ -145,8 +145,9 @@
 /*Tablet and Desktop screen sizes*/
 @media screen and (min-width: 641px) {
     .slideshow-container {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 80vh;
         margin: 0 auto;
+        justify-self: start;
     }
 }
