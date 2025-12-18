@@ -2,8 +2,6 @@
 
 //Handles the navigation and automatic transition of a slideshow container
 
-//wait until all elements are loaded
-window.onload = function () {
 
 
   //make a variable for the slide index
@@ -62,4 +60,3 @@ window.onload = function () {
     showSlides(slideIndex);
   }
 
-}

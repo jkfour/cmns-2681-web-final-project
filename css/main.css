@@ -173,7 +173,7 @@ dl {
 
 dt {
     font-size: 1.3rem;
-    margin: 15px auto;
+    margin: 15px auto 15px 5%;
     width: fit-content;
     padding: 5px 10px;
     background-color: var(--secondary-color-hsla);
@@ -182,8 +182,7 @@ dt {
 
 dd {
     font-style: italic;
-
-    margin: 5px 0 5px 50px;
+    margin: 5px auto 5px 20%;
 }
 
 dd::before {
@@ -369,6 +368,10 @@ Mobile screen sizes
 
     #navBar #secondSubmenu {
         display: none;
+    }
+
+    #business-offers {
+        padding: 5% 20%;
     }
 }
 
