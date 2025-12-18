@@ -1,10 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Slideshow container */
 .slideshow-container {
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .slides-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: 100%;
     position: relative;
@@ -21,8 +34,12 @@
 
 /*Event Cards*/
 .event-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -31,7 +48,8 @@
 .event-img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .event-info {
@@ -41,9 +59,20 @@
     left: 0;
     right: 0;
     background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .event-info p:first-of-type {
@@ -65,6 +94,8 @@
     right: 0;
     left: 0;
     background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+
     z-index: 3;
 }
 
@@ -74,6 +105,8 @@
 
 /*Slideshow Navigation*/
 .slideshow-nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     text-align: center;
     white-space: nowrap;
@@ -88,17 +121,28 @@
     width: auto;
     margin: 0 30px;
     color: var(--primary-color-hsla);
+    color: var(--primary-color-rgba);
+
     font-weight: bold;
     font-size: 2rem;
+    -webkit-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
     transition: 0.6s ease;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 /* On hover, add a boxshadow*/
 .prev:hover,
 .next:hover {
     background-color: var(--boxshadow-secondary-hsla);
-    box-shadow: 0 0 3px 6px rgba(154, 160, 185, .05), 0 0 5px 15px rgba(166, 173, 201, .2);
+    background-color: var(--boxshadow-secondary-rgba);
+
+    -webkit-box-shadow: 0 0 3px 6px rgba(154, 160, 185, .05), 0 0 5px 15px rgba(166, 173, 201, .2);
+
+            box-shadow: 0 0 3px 6px rgba(154, 160, 185, .05), 0 0 5px 15px rgba(166, 173, 201, .2);
 }
 
 /* The dots/bullets/indicators */
@@ -108,19 +152,37 @@
     width: 15px;
     margin: 0 2px;
     background-color: var(--primary-color-hsla);
+    background-color: var(--primary-color-rgba);
+
     border-radius: 50%;
     display: inline-block;
+    -webkit-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
     transition: background-color 0.6s ease;
 }
 
 .dot:hover {
     background-color: var(--background-color-hsla);
+    background-color: var(--background-color-rgba);
+
 }
 
 /* Slideshow Card Transition Animation */
 .fade {
-    animation-name: fade;
-    animation-duration: 2s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .7
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
@@ -148,6 +210,7 @@
         width: auto;
         height: 80vh;
         margin: 0 auto;
-        justify-self: start;
+        -ms-grid-column-align: start;
+            justify-self: start;
     }
 }

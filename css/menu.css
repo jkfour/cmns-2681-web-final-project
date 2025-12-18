@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @charset "utf-8";
 
 main {
+    display: -ms-grid;
     display: grid;
     background-image: url("../media/images/hotel-wallpaper-black.webp");
     background-size: 50%;
@@ -10,10 +18,12 @@ main img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .grid-container {
+    display: -ms-grid;
     display: grid;
     margin: auto;
 }
@@ -26,6 +36,8 @@ img.inline {
 
 .grid-item {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background-color: var(--background-color-hsla);
     background-color: var(--background-color-rgba);
@@ -38,10 +50,12 @@ img.inline {
         padding: 10px;
     }
     .grid-container {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        -ms-grid-rows: 0.2fr 10px 1fr 10px 1fr 10px 0.5fr 10px 0.1fr;
         grid-template-rows: 0.2fr 1fr 1fr 0.5fr 0.1fr;
 
-        grid-template-areas:
+            grid-template-areas:
             "open"
             "drinks"
             "pearls"
@@ -59,10 +73,12 @@ img.inline {
         padding: 30px;
     }
     .grid-container {
+        -ms-grid-columns: 0.5fr 10px 0.5fr;
         grid-template-columns: 0.5fr 0.5fr;
+        -ms-grid-rows: 0.2fr 10px 1fr 10px 0.5fr 10px 0.1fr;
         grid-template-rows: 0.2fr 1fr 0.5fr 0.1fr;
 
-        grid-template-areas:
+            grid-template-areas:
             "open open"
             "drinks pearls"
             "general general"
@@ -77,18 +93,24 @@ img.inline {
         padding: 50px 30px;
     }
     .grid-container {
+        -ms-grid-columns: 0.5fr 10px 1fr 10px 0.5fr;
         grid-template-columns: 0.5fr 1fr 0.5fr;
+        -ms-grid-rows: 0.2fr 10px 0.4fr 10px 0.2fr;
         grid-template-rows: 0.2fr 0.4fr 0.2fr;
 
-        grid-template-areas:
+            grid-template-areas:
             "drinks open pearls"
             "drinks general pearls"
             ". close .";
         gap: 10px;
-        align-items: end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: end;
     }
 
     .grid-container div {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
 }

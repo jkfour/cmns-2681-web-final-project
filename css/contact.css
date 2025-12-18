@@ -1,12 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @charset "utf-8";
 
 :root {
---invalid-color: rgb(105, 49, 49);
---valid-color: rgb(37, 102, 36);
+   --invalid-color: rgb(105, 49, 49);
+   --valid-color: rgb(37, 102, 36);
 }
 
 /*Page layout styles*/
 main {
+   display: -ms-grid;
    display: grid;
 }
 
@@ -26,11 +34,15 @@ main {
    display: block;
    width: 100%;
    max-height: 300px;
-   object-fit: cover;
-   clip-path: inset(1px round 10px);
+   -o-object-fit: cover;
+      object-fit: cover;
+   -webkit-clip-path: inset(1px round 10px);
+           clip-path: inset(1px round 10px);
 }
 
 #callback {
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
    padding: 2%;
 }
@@ -42,29 +54,37 @@ form {
    height: 100%;
    color: var(--primary-color-rgba);
    color: var(--primary-color-hsla);
+   display: -ms-grid;
    display: grid;
    gap: 20px;
    grid-auto-flow: row;
+   -ms-grid-rows: 1fr 20px auto;
    grid-template-rows: 1fr auto;
 
 }
 
 fieldset {
+   display: -ms-grid;
    display: grid;
    grid-auto-flow: row;
+   -ms-grid-rows: auto;
    grid-template-rows: auto;
    gap: 20px;
 
 }
 
 .formRow {
+   display: -ms-grid;
    display: grid;
    grid-auto-flow: column;
+   -ms-grid-columns: 0.8fr 20px 1fr;
    grid-template-columns: 0.8fr 1fr;
    gap: 20px;
 }
 
-#msgButtons, #appButtons {
+#msgButtons,
+#appButtons {
+   -ms-grid-columns: 1fr 1fr;
    grid-template-columns: 1fr 1fr;
    justify-items: center;
 }
@@ -77,18 +97,26 @@ fieldset {
 /* Legend Styles */
 legend {
    background-color: var(--accent-color-hsla);
+   background-color: var(--accent-color-rgba);
+
    color: var(--primary-color-hsla);
+   color: var(--primary-color-rgba);
+
    padding: 5px;
 }
 
 select {
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
-   justify-self: end;
+   -ms-grid-column-align: end;
+       justify-self: end;
    text-align: center;
 }
 
 textarea {
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
    min-height: 100px;
    max-width: 100%;
    resize: none;
@@ -96,61 +124,104 @@ textarea {
 
 input[type='submit'],
 input[type='reset'] {
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
    font-size: 1.2em;
    padding: 5px;
 }
 
 #msgInfo {
-   justify-self: end;
+   -ms-grid-column-align: end;
+       justify-self: end;
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
 }
 
 #gameSpin {
-   justify-self: end;
+   -ms-grid-column-align: end;
+       justify-self: end;
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
    text-align: center;
    height: 30px;
 }
 
 #mailCheck {
+   -ms-grid-columns: 2fr 0.5fr;
    grid-template-columns: 2fr 0.5fr;
 }
 
 #mailCB {
-   justify-self: end;
-   transform: scale(1.5);
+   -ms-grid-column-align: end;
+       justify-self: end;
+   -webkit-transform: scale(1.5);
+       -ms-transform: scale(1.5);
+           transform: scale(1.5);
 }
 
 
 /* Validation Styles */
-input, textarea {
+input,
+textarea {
    color: var(--primary-color-hsla);
+   color: var(--primary-color-rgba);
+
    background-color: var(--secondary-color-hsla);
+   background-color: var(--secondary-color-rgba);
+
+}
+
+input:-moz-placeholder-shown {
+   background: var(--invalid-color);
+}
+
+input:-ms-input-placeholder {
+   background: var(--invalid-color);
 }
 
 input:placeholder-shown {
-      background: var(--invalid-color);
+   background: var(--invalid-color);
+}
+
+input:has(::-webkit-input-placeholder):not(placeholder-shown) {
+   background: var(--valid-color);
+}
+
+input:has(::-moz-placeholder):not(placeholder-shown) {
+   background: var(--valid-color);
+}
+
+input:has(:-ms-input-placeholder):not(placeholder-shown) {
+   background: var(--valid-color);
+}
+
+input:has(::-ms-input-placeholder):not(placeholder-shown) {
+   background: var(--valid-color);
 }
 
 input:has(::placeholder):not(placeholder-shown) {
-      background: var(--valid-color);
+   background: var(--valid-color);
 }
 
 
 input:focus:valid:required,
-input:valid:required{
+input:valid:required {
    color: var(--primary-color-hsla);
    background: var(--valid-color);
 }
 
 
-input:focus:invalid, input:invalid{
+input:focus:invalid,
+input:invalid {
    color: var(--primary-color-hsla);
    background: var(--invalid-color);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
    color: var(--secondary-color-hsla);
    background: var(--primary-color-hsla);
 }
@@ -160,9 +231,11 @@ input:focus, textarea:focus {
 @media screen and (max-width: 860px) {
    main {
       padding: 10px;
+      -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+      -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas:
+          grid-template-areas:
          "img"
          "message"
          "application"
@@ -176,9 +249,11 @@ input:focus, textarea:focus {
 @media screen and (min-width: 861px) {
    main {
       padding: 30px 10%;
+      -ms-grid-columns: 1fr 30px 1fr;
       grid-template-columns: 1fr 1fr;
+      -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas:
+          grid-template-areas:
          "message img"
          "message application"
          "callback callback";

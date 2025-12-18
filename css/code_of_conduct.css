@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @charset "utf-8";
 
 article ol {
@@ -12,7 +19,8 @@ article ol p {
 }
 
 article ol img {
-    clip-path: inset(10% round 10%);
+    -webkit-clip-path: inset(10% round 10%);
+            clip-path: inset(10% round 10%);
 }
 
 article li {
@@ -20,6 +28,8 @@ article li {
     padding: 1em;
     margin: 1em auto;
     background-color: var(--secondary-color-hsla);
+    background-color: var(--secondary-color-rgba);
+
     border-radius: 12px;
 }
 
@@ -44,11 +54,16 @@ article li:has(img)::after {
 
 
 h3 {
-    transform: translate(0, -20px);
+    -webkit-transform: translate(0, -20px);
+        -ms-transform: translate(0, -20px);
+            transform: translate(0, -20px);
 }
+
 h2+p {
     border-radius: 12px;
     background-color: var(--secondary-color-hsla);
+    background-color: var(--secondary-color-rgba);
+
 }
 
 h5 {
@@ -57,6 +72,8 @@ h5 {
     padding: 20px;
     border-radius: 12px;
     background-color: var(--secondary-color-hsla);
+    background-color: var(--secondary-color-rgba);
+
 }
 
 
@@ -74,9 +91,11 @@ h5 {
     article ol {
         margin: 5% 1%;
     }
+
     article ol h3 {
         font-size: 1.2rem;
     }
+
     ol p {
         font-size: 1rem;
     }
@@ -101,6 +120,7 @@ h5 {
     main {
         padding: 5%;
     }
+
     article h2+p {
         margin: 2em;
         padding: 2em;

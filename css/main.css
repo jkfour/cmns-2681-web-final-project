@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @charset "utf-8";
 
 /*
@@ -6,7 +13,8 @@
 }
 */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 :root {
@@ -39,7 +47,9 @@ html {
 body {
     background-color: var(--secondary-color-rgba);
     background-color: var(--secondary-color-hsla);
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
     overflow-x: hidden;
     max-width: 100vw;
@@ -57,6 +67,7 @@ main {
 #header-grid {
     background-color: var(--background-color-hsla);
     background-color: var(--background-color-rgba);
+    display: -ms-grid;
     display: grid;
     width: 100%;
     height: auto;
@@ -66,16 +77,20 @@ main {
 #title {
     width: 100%;
     height: auto;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 #title h1 {
     text-shadow:
         3px 0px 2px var(--accent-color-hsla);
+    text-shadow:
+        3px 0px 2px var(--accent-color-rgba);
 }
 
 /*Navigation Bar*/
 #navBar {
+    display: -ms-grid;
     display: grid;
 }
 
@@ -94,11 +109,17 @@ nav a {
     text-align: center;
     width: 100%;
     border: 3px solid var(--secondary-color-rgba);
+        border: 3px solid var(--secondary-color-hsla);
+
 }
 
 nav a:hover {
     color: var(--primary-color-hsla);
-    box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
+    -webkit-box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
+            box-shadow: 0 0 1px 5px var(--boxshadow-primary-rgba), 0 0 3px 10px var(--boxshadow-secondary-rgba);
+       -webkit-box-shadow: 0 0 1px 5px var(--boxshadow-primary-hsla), 0 0 3px 10px var(--boxshadow-secondary-hsla);
+               box-shadow: 0 0 1px 5px var(--boxshadow-primary-hsla), 0 0 3px 10px var(--boxshadow-secondary-hsla);
+
     border-radius: 9px;
 }
 
@@ -117,8 +138,10 @@ nav a:hover {
     padding: 30px;
     background-color: var(--background-color-rgba);
     background-color: var(--background-color-hsla);
-    box-shadow: 0 0 15px 7px var(--boxshadow-primary-hsla);
-    box-shadow: -0 0 15px 7px var(--boxshadow-secondary-hsla);
+    -webkit-box-shadow: 0 0 15px 7px var(--boxshadow-primary-hsla);
+            box-shadow: 0 0 15px 7px var(--boxshadow-primary-hsla);
+    -webkit-box-shadow: -0 0 15px 7px var(--boxshadow-secondary-hsla);
+            box-shadow: -0 0 15px 7px var(--boxshadow-secondary-hsla);
     border-radius: 25px;
 }
 
@@ -168,15 +191,21 @@ h2 {
 
 dl {
     color: var(--primary-color-hsla);
+        color: var(--primary-color-rgba);
+
     margin-top: 30px;
 }
 
 dt {
     font-size: 1.3rem;
     margin: 15px auto 15px 5%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 5px 10px;
     background-color: var(--secondary-color-hsla);
+        background-color: var(--secondary-color-rgba);
+
     border-radius: 12px;
 }
 
@@ -208,16 +237,30 @@ footer {
 
 /*Links to socials*/
 #socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
 }
 
 /*footer quick info*/
 #quick-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 15px;
 }
 
@@ -255,10 +298,13 @@ Mobile screen sizes
 
     /*Header Styles*/
     #header-grid {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 50px 1fr 100px;
         grid-template-columns: 50px 1fr 100px;
+        -ms-grid-rows: 100px auto;
         grid-template-rows: 100px auto;
-        grid-template-areas:
+            grid-template-areas:
             "navicon title logo"
             "nav . .";
     }
@@ -267,15 +313,21 @@ Mobile screen sizes
     .rotatedImg {
         max-width: 100px;
         border-radius: 15px 0 0 15px;
-        transform: translate(10%, 0%) rotateY(-35deg);
+        -webkit-transform: translate(10%, 0%) rotateY(-35deg);
+                transform: translate(10%, 0%) rotateY(-35deg);
     }
 
     /*The logo is a link to the homepage*/
     #logo-link {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         background-color: transparent;
-        perspective: 400px;
+        -webkit-perspective: 400px;
+                perspective: 400px;
     }
 
     /*Navigation*/
@@ -283,7 +335,8 @@ Mobile screen sizes
         width: 100%;
         height: auto;
         padding: 3px;
-        align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
         background-color: var(--background-color-rgba);
         background-color: var(--background-color-hsla);
     }
@@ -299,13 +352,15 @@ Mobile screen sizes
         top: 100px;
         left: 0;
         z-index: 5;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 100%;
         grid-template-rows: repeat(auto-fit);
     }
 
     /*Hide submenu layouts*/
-    #navBar .firstSubmenu + .secondSubmenu {
+    #navBar .firstSubmenu+.secondSubmenu {
         display: none;
     }
 
@@ -358,14 +413,18 @@ Mobile screen sizes
         position: relative;
     }
 
-    #navBar .firstSubmenu:hover ul > .nested {
+    #navBar .firstSubmenu:hover ul>.nested {
         display: block;
     }
+
     #navBar .firstSubmenu:hover ul {
+        display: -ms-grid;
         display: grid;
         position: absolute;
         top: 40px;
         z-index: 5;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 100%;
         justify-items: center;
@@ -383,7 +442,7 @@ Mobile screen sizes
 @media screen and (min-width: 1261px) and (max-width: 1784px) {
 
     /*Hide other layouts*/
-      /*Hide other layouts*/
+    /*Hide other layouts*/
     #navBar .fullNav {
         display: none;
     }
@@ -403,14 +462,18 @@ Mobile screen sizes
         position: relative;
     }
 
-    #navBar .secondSubmenu:hover ul > .nested {
+    #navBar .secondSubmenu:hover ul>.nested {
         display: block;
     }
+
     #navBar .secondSubmenu:hover ul {
+        display: -ms-grid;
         display: grid;
         position: absolute;
         top: 40px;
         z-index: 5;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 100%;
         justify-items: center;
@@ -428,7 +491,7 @@ Mobile screen sizes
 @media screen and (min-width: 1785px) {
 
     /*Hide submenu layouts*/
-    #navBar li.firstSubmenu + li.secondSubmenu {
+    #navBar li.firstSubmenu+li.secondSubmenu {
         display: none !important;
     }
 
@@ -468,10 +531,13 @@ Tablet and Desktop screen sizes
 
     /*Header Styles*/
     #header-grid {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 200px 1fr;
         grid-template-columns: 200px 1fr;
+        -ms-grid-rows: 200px auto;
         grid-template-rows: 200px auto;
-        grid-template-areas:
+            grid-template-areas:
             "logo title"
             "navicon nav";
     }
@@ -480,15 +546,21 @@ Tablet and Desktop screen sizes
     .rotatedImg {
         max-width: 200px;
         border-radius: 0 15px 15px 0;
-        transform: translate(-10%, 0%) rotateY(35deg);
+        -webkit-transform: translate(-10%, 0%) rotateY(35deg);
+                transform: translate(-10%, 0%) rotateY(35deg);
     }
 
     /*The logo is a link to the homepage*/
     #logo-link {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         background-color: transparent;
-        perspective: 400px;
+        -webkit-perspective: 400px;
+                perspective: 400px;
     }
 
     /*Navigation*/
@@ -501,7 +573,8 @@ Tablet and Desktop screen sizes
 
     #navicon {
         display: none;
-        justify-self: center;
+        -ms-grid-column-align: center;
+            justify-self: center;
         width: 50px;
         height: auto;
     }
@@ -514,6 +587,8 @@ Tablet and Desktop screen sizes
     }
 
     #navBar {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 100%;
         justify-items: center;
@@ -525,7 +600,9 @@ Tablet and Desktop screen sizes
     nav a {
         white-space: nowrap;
         padding: 5px;
-        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
         border-radius: 9px;
     }
 
@@ -541,16 +618,34 @@ Tablet and Desktop screen sizes
     border: 10px solid transparent;
     border-radius: 12px;
     background:
+        -o-linear-gradient(white, white) padding-box,
+        -o-linear-gradient(135deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,
+            rgba(141, 108, 0, 0.9) 70%, rgba(70, 70, 70, 0.3) 75%) border-box;
+    background:
         linear-gradient(white, white) padding-box,
         linear-gradient(-45deg, rgba(70, 70, 70, 0.3) 30%, rgba(141, 108, 0, 0.9) 50%,
             rgba(141, 108, 0, 0.9) 70%, rgba(70, 70, 70, 0.3) 75%) border-box;
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
-    animation: border_shift 3s linear infinite;
+    -webkit-animation: border_shift 3s linear infinite;
+            animation: border_shift 3s linear infinite;
     background-size: 500% 100%;
 }
 
 /*animation for the gradient border*/
+@-webkit-keyframes border_shift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
 @keyframes border_shift {
     0% {
         background-position: 0% 0%;
