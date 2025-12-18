@@ -305,8 +305,13 @@ Mobile screen sizes
         grid-template-rows: repeat(auto-fit);
     }
 
-    .nested {
+    /*Hide submenu layouts*/
+    #navBar .firstSubmenu + .secondSubmenu {
         display: none;
+    }
+
+    #navBar .fullNav {
+        display: block;
     }
 
     nav a {
@@ -318,7 +323,6 @@ Mobile screen sizes
         font-size: 1.2rem;
     }
 
-    dd {}
 
     #socials a {
         padding: 5px;
@@ -333,28 +337,32 @@ Mobile screen sizes
 
 
 /*Fit for first set of submenus*/
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 641px) and (max-width: 1260px) {
 
-    /*Hide menu items that aren't nested*/
-    #navBar li:not(.nested) {
+    /*Hide other layouts*/
+    #navBar .fullNav {
         display: none;
     }
 
-    #navBar > #firstSubmenu { 
-        display: grid;
-        height: fit-content;
-        width: 100%;
-        justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    #navBar > #firstSubmenu ul {
+    #navBar .secondSubmenu {
         display: none;
     }
-    #navBar > #firstSubmenu li {
+
+    /*hide nested menu items*/
+    #navBar .nested {
+        display: none;
+    }
+
+    /*Show the required layout*/
+    #navBar .firstSubmenu {
+        display: block;
         position: relative;
     }
-    #navBar > #firstSubmenu li:hover > ul {
+
+    #navBar .firstSubmenu:hover ul > .nested {
+        display: block;
+    }
+    #navBar .firstSubmenu:hover ul {
         display: grid;
         position: absolute;
         top: 40px;
@@ -366,9 +374,6 @@ Mobile screen sizes
         gap: 10px;
     }
 
-    #navBar #secondSubmenu {
-        display: none;
-    }
 
     #business-offers {
         padding: 5% 20%;
@@ -376,28 +381,33 @@ Mobile screen sizes
 }
 
 /*Navbar fits 3 tabs*/
-@media screen and (min-width: 1261px){
+@media screen and (min-width: 1261px) and (max-width: 1784px) {
 
-        /*Hide menu items that aren't nested*/
-    #navBar li:not(.nested) {
+    /*Hide other layouts*/
+      /*Hide other layouts*/
+    #navBar .fullNav {
         display: none;
     }
 
-    #navBar > #secondSubmenu { 
-        display: grid;
-        height: fit-content;
-        width: 100%;
-        justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    #navBar > #secondSubmenu ul {
+    #navBar .firstSubmenu {
         display: none;
     }
-    #navBar > #secondSubmenu li {
+
+    /*hide nested menu items*/
+    #navBar .nested {
+        display: none;
+    }
+
+    /*Show the required layout*/
+    #navBar .secondSubmenu {
+        display: block;
         position: relative;
     }
-    #navBar > #secondSubmenu li:hover > ul {
+
+    #navBar .secondSubmenu:hover ul > .nested {
+        display: block;
+    }
+    #navBar .secondSubmenu:hover ul {
         display: grid;
         position: absolute;
         top: 40px;
@@ -408,30 +418,24 @@ Mobile screen sizes
         grid-template-rows: repeat(auto-fit);
         gap: 10px;
     }
-        #navBar #firstSubmenu {
-        display: none;
+
+
+    #business-offers {
+        padding: 5% 20%;
     }
 }
 
 /*Navbar fits full width*/
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1785px) {
 
-    /*Hide menu items that are nested*/
-    ul.subMenu{
-        display: none;
+    /*Hide submenu layouts*/
+    #navBar li.firstSubmenu + li.secondSubmenu {
+        display: none !important;
     }
 
-    /*show menu items that aren't nested*/
-    #navBar li:not(.nested) {
+    #navBar .fullNav {
         display: block;
     }
-    #navBar #firstSubmenu {
-        display: none;
-    }
-    #navBar #secondSubmenu {
-        display: none;
-    }
-
 }
 
 /********************

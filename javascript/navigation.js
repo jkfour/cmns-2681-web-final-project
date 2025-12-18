@@ -7,27 +7,44 @@
 
 
 let navBar = document.getElementById("navBar");
-let mediaQuery = window.matchMedia("(max-width: 640px");
+
+let firstSub = document.querySelectorAll("li.firstSubmenu");
+let secondSub = document.querySelectorAll("li.secondSubmenu");
+let full = document.querySelectorAll("li.fullNav")
+
+
 let opened = false;
 
 //Toggle the navigation bar when the mobile button is pressed
 function toggleNav() {
     //Check if the current window with matches the media query for mobile widths
-    if (mediaQuery.matches) {
-            //Then check if the mobile navigation bar is already open. 
+    if (mobileQuery.matches) {
+        //hide submenus
+        firstSub.forEach(element => {
+            element.style.display = "none";
+        });
+        secondSub.forEach(element => {
+            element.style.display = "none";
+        });
+        full.forEach(element => {
+            element.style.display = "none";
+        });
+
+        //Then check if the mobile navigation bar is already open. 
         if (opened) {
             //if opened, hide the navigation
-            navBar.style.display = "none";
+            full.forEach(element => {
+                element.style.display = "block";
+            });
             opened = false;
         } else {
             //otherwise, show the navigation
             navBar.style.display = "grid";
             opened = true;
         }
-        //if the current window does not match the media query, show the nav bar
-    } else {
-        navBar.style.display = "grid";
+
     }
+
 }
 
 
@@ -38,8 +55,9 @@ window.addEventListener('resize', checkState);
 function checkState() {
     //if the state does not match, as in, the window was resized from
     //mobile to desktop widths, ensure the navbar is displayed
-    if (!mediaQuery.matches) {
+    if (!mobileQuery.matches) {
         navBar.style.display = "grid";
+        toggleNav();
     }
     //otherwise, ensure the navbar is hidden by default
     else {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!--
     Author: James Fournier
     -->
 
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="description" content="Hobby and Games Shop">
     <meta name="keywords" content="Hobby, Boardgame, Cardgame">
     <meta name="author" content="Keegan Fournier">
@@ -23,7 +23,7 @@
 <body>
     <header id="header-grid">
         <a class="header-grid-item" id=logo-link style="grid-area: logo" href="index.html">
-            <img class="rotatedImg" src="media/images/logo.jpg" alt="Sanctuary Games" />
+            <img class="rotatedImg" src="media/images/logo.jpg" alt="Sanctuary Games">
         </a>
 
         <div class="header-grid-item" id="title" style="grid-area: title">
@@ -36,49 +36,51 @@
 
         <nav class="header-grid-item" style="grid-area: nav">
             <ul id="navBar">
-                <li class="navItem"><a href="play_space.html">The Place to Play</a></li>
-                <li class="navItem"><a href="menu.html">Food & Drinks</a></li>
-                <li class="navItem"><a href="products.html">Our Products</a></li>
-                <li class="navItem"><a href="code_of_conduct.html">Code of Conduct</a></li>
-                <li class="navItem"><a href="contact.html">Send Us A Message!</a></li>
+                <li class="navItem fullNav"><a href="play_space.html">The Place to Play</a></li>
+                <li class="navItem fullNav"><a href="menu.html">Food & Drinks</a></li>
+                <li class="navItem fullNav"><a href="products.html">Our Products</a></li>
+                <li class="navItem fullNav"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                <li class="navItem fullNav"><a href="contact.html">Send Us A Message!</a></li>
 
-                <ul id="firstSubmenu" class="subMenu">
 
-                    <li class="navItem nested">
-                        <a href="#">What We Do</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
-                            <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
-                            <li class="navItem nested"><a href="products.html">Our Products</a></li>
-                        </ul>
-                    </li>
 
-                    <li class="navItem nested">
-                        <a href="#">Information</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
-                            <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
-                        </ul>
-                    </li>
+                <li class="navItem firstSubmenu">
+                    <a href="#">What We Do</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
+                        <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
+                        <li class="navItem nested"><a href="products.html">Our Products</a></li>
+                    </ul>
+                </li>
 
-                </ul>
-                <ul id="secondSubmenu" class="subMenu">
-                            <li class="navItem nested"><a href="products.html">Our Products</a></li>
-                    <li class="navItem nested">
-                        <a href="#">Perks of Playing</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
-                            <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
-                        </ul>
-                    </li>
-                    <li class="navItem nested">
-                        <a href="#">Information</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
-                            <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <li class="navItem firstSubmenu">
+                    <a href="#">Information</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                        <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="navItem secondSubmenu"><a href="products.html">Our Products</a></li>
+                <li class="navItem secondSubmenu">
+                    <a href="#">Perks of Playing</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
+                        <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
+                    </ul>
+                </li>
+                <li class="navItem secondSubmenu">
+                    <a href="#">Information</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                        <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
+                    </ul>
+                </li>
+
+
+
                 <li style="display: block; position: absolute; right: 0; top: 250px; width: fit-content;"><a
                         href="reference.html" style=" color: black; background-color: white;">reference</a></li>
             </ul>
@@ -86,17 +88,17 @@
     </header>
     <main>
         <div class="grid-item" style="grid-area: message;">
-            <form id="messageForm" action="" method="post">
+            <form id="messageForm" action="msg-send.php" method="post">
                 <fieldset>
                     <legend>Leave Us a Message!</legend>
                     <br>
                     <div class="formRow">
                         <label for="msgName">Name*</label>
-                        <input name="msgName" id="msgName" type="text" placeholder=" " required />
+                        <input name="msgName" id="msgName" type="text" placeholder=" " required>
                     </div>
                     <div class="formRow">
                         <label for="msgCity">City</label>
-                        <input name="msgCity" id="msgCity" type="text" value="Salmon Arm" />
+                        <input name="msgCity" id="msgCity" type="text" value="Salmon Arm">
                     </div>
                     <div class="formRow">
                         <label for="msgProv">Province</label>
@@ -106,7 +108,7 @@
                             <option value="sk">SK</option>
                             <option value="mb">MB</option>
                             <option value="qc">QC</option>
-                            <opttion value="on">ON</opttion>
+                            <option value="on">ON</option>
                             <option value="pe">PE</option>
                             <option value="nl">NL</option>
                             <option value="nb">NB</option>
@@ -119,12 +121,13 @@
                     <div class="formRow">
                         <label for="msgPhone">Phone Number</label>
                         <input name="msgPhone" id="msgPhone" type="tel" placeholder="nnn-nnn-nnnn"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <div class="formRow">
                         <label for="msgMail">E-mail*</label>
                         <input name="msgMail" id="msgMail" type="email"
-                            pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="example@org.com" required />
+                            pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" placeholder="example@org.com"
+                            required>
                     </div>
                     <div class="formRow">
                         <label for="msgInfo">Is your message about one of the following?</label>
@@ -145,18 +148,18 @@
                     </div>
                     <div class="formRow">
                         <label for="favGame">Do you have a favourite game?</label>
-                        <input name="gameFav" id="favGame" type="text" />
+                        <input name="gameFav" id="favGame" type="text">
 
                     </div>
                     <div class="formRow" id="mailCheck">
                         <label for="mailCB">I would like to join the mailing list for updates on products and
                             events!</label>
-                        <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+                        <input name="mailMe" id="mailCB" value="yes" type="checkbox">
                     </div>
                 </fieldset>
                 <div class="formRow" id="msgButtons">
-                    <input onclick="checkMsg()" type="submit" value="Send" />
-                    <input type="reset" value="Reset" />
+                    <input onclick="checkMsg()" type="submit" value="Send">
+                    <input type="reset" value="Reset">
                 </div>
             </form>
         </div>
@@ -164,17 +167,17 @@
             <img src="media/images/contact/toys.jpg" alt="Smiling Pikachu Toy">
         </div>
         <div class="grid-item" style="grid-area: application;">
-            <form id="apply" action="" method="post">
+            <form id="apply" action="app-apply.php" method="post">
                 <fieldset id="applyInfo">
                     <legend>Join our Team!</legend>
                     <br>
                     <div class="formRow">
                         <label for="appName">Name*</label>
-                        <input name="custName" id="appName" type="text" placeholder="First & Last Name" required />
+                        <input name="custName" id="appName" type="text" placeholder="First & Last Name" required>
                     </div>
                     <div class="formRow">
                         <label for="appCity">City</label>
-                        <input name="appCity" id="appCity" type="text" value="Salmon Arm" required />
+                        <input name="appCity" id="appCity" type="text" value="Salmon Arm" required>
                     </div>
                     <div class="formRow">
                         <label for="appProv">Province</label>
@@ -184,7 +187,7 @@
                             <option value="sk">SK</option>
                             <option value="mb">MB</option>
                             <option value="qc">QC</option>
-                            <opttion value="on">ON</opttion>
+                            <option value="on">ON</option>
                             <option value="pe">PE</option>
                             <option value="nl">NL</option>
                             <option value="nb">NB</option>
@@ -197,11 +200,12 @@
                     <div class="formRow">
                         <label for="appPhone">Phone Number</label>
                         <input name="appPhone" id="appPhone" type="tel" placeholder="nnn-nnn-nnnn"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <div class="formRow">
                         <label for="appMail">E-mail*</label>
-                        <input name="appEmail" id="appMail" type="email" placeholder="example@org.com" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" required />
+                        <input name="appEmail" id="appMail" type="email" placeholder="example@org.com"
+                            pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" required>
                     </div>
                     <div class="formRow" style="flex-direction: column;">
                         <label for="experience">Experience</label>
@@ -210,8 +214,8 @@
                     </div>
                 </fieldset>
                 <div class="formRow" id="appButtons">
-                    <input onclick="checkApp()" type="submit" value="Submit" />
-                    <input type="reset" value="Reset" />
+                    <input onclick="checkApp()" type="submit" value="Submit">
+                    <input type="reset" value="Reset">
                 </div>
             </form>
         </div>
