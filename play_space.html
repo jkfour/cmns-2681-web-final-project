@@ -30,55 +30,57 @@
             <h1>Sanctuary Games</h1>
         </div>
 
-        <div class="header-grid-item" id="navIconContainer" style="grid-area: navicon" onclick="toggleNav()">
+        <div class="header-grid-item" id="navIconContainer" style="grid-area: navicon" onclick="setLayout()">
             <img id="navicon" src="media/images/navicon.png">
         </div>
 
         <nav class="header-grid-item" style="grid-area: nav">
             <ul id="navBar">
-                <li class="navItem"><a href="play_space.html">The Place to Play</a></li>
-                <li class="navItem"><a href="menu.html">Food & Drinks</a></li>
-                <li class="navItem"><a href="products.html">Our Products</a></li>
-                <li class="navItem"><a href="code_of_conduct.html">Code of Conduct</a></li>
-                <li class="navItem"><a href="contact.html">Send Us A Message!</a></li>
+                <li class="navItem fullNav"><a href="play_space.html">The Place to Play</a></li>
+                <li class="navItem fullNav"><a href="menu.html">Food & Drinks</a></li>
+                <li class="navItem fullNav"><a href="products.html">Our Products</a></li>
+                <li class="navItem fullNav"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                <li class="navItem fullNav"><a href="contact.html">Send Us A Message!</a></li>
 
-                <ul id="firstSubmenu" class="subMenu">
 
-                    <li class="navItem nested">
-                        <a href="#">What We Do</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
-                            <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
-                            <li class="navItem nested"><a href="products.html">Our Products</a></li>
-                        </ul>
-                    </li>
 
-                    <li class="navItem nested">
-                        <a href="#">Information</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
-                            <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
-                        </ul>
-                    </li>
+                <li class="navItem firstSubmenu">
+                    <a href="#">What We Do</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
+                        <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
+                        <li class="navItem nested"><a href="products.html">Our Products</a></li>
+                    </ul>
+                </li>
 
-                </ul>
-                <ul id="secondSubmenu" class="subMenu">
-                            <li class="navItem nested"><a href="products.html">Our Products</a></li>
-                    <li class="navItem nested">
-                        <a href="#">Perks of Playing</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
-                            <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
-                        </ul>
-                    </li>
-                    <li class="navItem nested">
-                        <a href="#">Information</a>
-                        <ul class="subMenu">
-                            <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
-                            <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <li class="navItem firstSubmenu">
+                    <a href="#">Information</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                        <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="navItem secondSubmenu"><a href="products.html">Our Products</a></li>
+                <li class="navItem secondSubmenu">
+                    <a href="#">Perks of Playing</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="play_space.html">The Place to Play</a></li>
+                        <li class="navItem nested"><a href="menu.html">Food & Drinks</a></li>
+                    </ul>
+                </li>
+                <li class="navItem secondSubmenu">
+                    <a href="#">Information</a>
+                    <ul class="subMenu">
+                        <li class="navItem nested"><a href="code_of_conduct.html">Code of Conduct</a></li>
+                        <li class="navItem nested"><a href="contact.html">Send Us A Message!</a></li>
+                    </ul>
+                </li>
+
+
+
                 <li style="display: block; position: absolute; right: 0; top: 250px; width: fit-content;"><a
                         href="reference.html" style=" color: black; background-color: white;">reference</a></li>
             </ul>
